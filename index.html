@@ -53,7 +53,17 @@
             flex-direction: column;
             justify-content: center;
             padding: 70px 10%;
-            background: white;
+
+            background-image:
+                linear-gradient(
+                    rgba(255, 255, 255, 0.82),
+                    rgba(255, 255, 255, 0.82)
+                ),
+                url("hero.background.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         .hero h1 {
@@ -186,21 +196,33 @@
         </div>
     </nav>
 
-    <section class="hero">
-        <h1>Alden Arce-Romero</h1>
+<section class="hero">
 
-        <h2>Information Science | Aspiring Data & Business Analyst</h2>
+    <div class="hero-content">
 
-        <p>
-            I analyze data, ask better questions, and turn findings into
-            clear insights and recommendations that help people make better decisions.
-        </p>
+        <div class="hero-text">
+            <h1>Alden Arce-Romero</h1>
 
-        <div>
-            <a class="button" href="#projects">View My Projects</a>
-            <a class="button secondary" href="#contact">Contact Me</a>
+            <h2>Information Science | Aspiring Data & Business Analyst</h2>
+
+            <p>
+                I analyze data, ask better questions, and turn findings into
+                clear insights and recommendations that help people make better decisions.
+            </p>
+
+            <div>
+                <a class="button" href="#projects">View My Projects</a>
+                <a class="button secondary" href="#contact">Contact Me</a>
+            </div>
         </div>
-    </section>
+
+        <div class="profile-card">
+            <img src="profile.jpg" alt="Alden Arce-Romero">
+        </div>
+
+    </div>
+
+</section>
 
     <section class="about" id="about">
         <h2>About Me</h2>
