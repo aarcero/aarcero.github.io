@@ -116,21 +116,19 @@
             color: #d1d5db;
         }
 
-        .skills {
-            background: #172033;
+        .skills-content {
             text-align: center;
-            overflow: hidden;
         }
 
-        .skills h2 {
+        .skills-content h2 {
             color: white;
-            margin-bottom: 35px;
+            margin-bottom: 20px;
         }
 
         .skills-orbit {
             position: relative;
-            width: 800px;
-            height: 260px;
+            width: 520px;
+            height: 220px;
             margin: 0 auto;
         }
 
@@ -142,21 +140,18 @@
             text-align: center;
             color: white;
 
-            transform: translate(-50%, -50%);
-
-
-            offset-path: ellipse(330px 90px at 50% 50%);
+            offset-path: ellipse(210px 75px at 50% 50%);
             offset-rotate: 0deg;
 
-            animation: skillOrbit 25s linear infinite;
+            animation: skillOrbit 35s linear infinite;
         }
 
         .skill img {
-            width: 65px;
-            height: 65px;
+            width: 80px;
+            height: 80px;
             object-fit: contain;
             display: block;
-            margin: 0 auto 8px;
+            margin: 0 auto 7px;
         }
 
         .skill span {
@@ -165,42 +160,68 @@
             font-weight: 500;
         }
 
-
         .skill-1 {
             animation-delay: 0s;
         }
 
         .skill-2 {
-            animation-delay: -3.57s;
+            animation-delay: -5s;
         }
 
         .skill-3 {
-            animation-delay: -7.14s;
+            animation-delay: -10s;
         }
 
         .skill-4 {
-            animation-delay: -10.71s;
+            animation-delay: -15s;
         }
 
         .skill-5 {
-            animation-delay: -14.28s;
+            animation-delay: -20s;
         }
 
         .skill-6 {
-            animation-delay: -17.85s;
+            animation-delay: -25s;
         }
 
         .skill-7 {
-            animation-delay: -21.42s;
+            animation-delay: -30s;
         }
 
         @keyframes skillOrbit {
-            from {
+            0% {
                 offset-distance: 0%;
+                opacity: 1;
             }
 
-            to {
+            45% {
+                opacity: 1;
+            }
+
+            50% {
+                offset-distance: 50%;
+                opacity: 0;
+            }
+
+            95% {
+                opacity: 0;
+            }
+
+            100% {
                 offset-distance: 100%;
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .about-skills {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .skills-orbit {
+                width: 100%;
+                max-width: 520px;
             }
         }
         .projects {
@@ -315,7 +336,9 @@
 
 </section>
 
-    <section class="about" id="about">
+<section class="about-skills" id="about">
+
+    <div class="about-content">
         <h2>About Me</h2>
 
         <p>
@@ -324,9 +347,11 @@
             clear and understandable solutions. This portfolio is a collection of the projects
             and work that I have completed throughout my academic and professional journey.
         </p>
-    </section>
-    
-    <section class="skills" id="skills">
+    </div>
+
+
+    <div class="skills-content">
+
         <h2>Skills</h2>
 
         <div class="skills-orbit">
@@ -367,7 +392,10 @@
             </div>
 
         </div>
-    </section>
+
+    </div>
+
+</section>
     
     <section class="projects" id="projects">
         <h2>Featured Projects</h2>
