@@ -116,6 +116,93 @@
             color: #d1d5db;
         }
 
+        .skills {
+            background: #172033;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .skills h2 {
+            color: white;
+            margin-bottom: 35px;
+        }
+
+        .skills-orbit {
+            position: relative;
+            width: 800px;
+            height: 260px;
+            margin: 0 auto;
+        }
+
+        .skill {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100px;
+            text-align: center;
+            color: white;
+
+            transform: translate(-50%, -50%);
+
+
+            offset-path: ellipse(330px 90px at 50% 50%);
+            offset-rotate: 0deg;
+
+            animation: skillOrbit 25s linear infinite;
+        }
+
+        .skill img {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto 8px;
+        }
+
+        .skill span {
+            display: block;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+
+        .skill-1 {
+            animation-delay: 0s;
+        }
+
+        .skill-2 {
+            animation-delay: -3.57s;
+        }
+
+        .skill-3 {
+            animation-delay: -7.14s;
+        }
+
+        .skill-4 {
+            animation-delay: -10.71s;
+        }
+
+        .skill-5 {
+            animation-delay: -14.28s;
+        }
+
+        .skill-6 {
+            animation-delay: -17.85s;
+        }
+
+        .skill-7 {
+            animation-delay: -21.42s;
+        }
+
+        @keyframes skillOrbit {
+            from {
+                offset-distance: 0%;
+            }
+
+            to {
+                offset-distance: 100%;
+            }
+        }
         .projects {
             background: #0f172a;
         }
@@ -238,7 +325,50 @@
             and work that I have completed throughout my academic and professional journey.
         </p>
     </section>
+    
+    <section class="skills" id="skills">
+        <h2>Skills</h2>
 
+        <div class="skills-orbit">
+
+            <div class="skill skill-1">
+                <img src="excel.jpg" alt="Excel logo">
+                <span>Excel</span>
+            </div>
+
+            <div class="skill skill-2">
+                <img src="tableau.png" alt="Tableau logo">
+                <span>Tableau</span>
+            </div>
+
+            <div class="skill skill-3">
+                <img src="python.png" alt="Python logo">
+                <span>Python</span>
+            </div>
+
+            <div class="skill skill-4">
+                <img src="r.png" alt="R logo">
+                <span>R</span>
+            </div>
+
+            <div class="skill skill-5">
+                <img src="github.png" alt="GitHub logo">
+                <span>GitHub</span>
+            </div>
+
+            <div class="skill skill-6">
+                <img src="linux.png" alt="Linux logo">
+                <span>Linux</span>
+            </div>
+
+            <div class="skill skill-7">
+                <img src="sql.png" alt="SQL logo">
+                <span>SQL</span>
+            </div>
+
+        </div>
+    </section>
+    
     <section class="projects" id="projects">
         <h2>Featured Projects</h2>
 
