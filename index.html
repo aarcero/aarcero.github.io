@@ -1,17 +1,296 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Alden Arce-Romero | Data Analysis Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alden Arce-Romero | Aspiring Data & Business Analyst</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f8fa;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: #111827;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav h2 {
+            color: white;
+        }
+
+        nav a {
+            color: #d1d5db;
+            text-decoration: none;
+            margin-left: 24px;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 70px 10%;
+            background: white;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: 1.6rem;
+            font-weight: normal;
+            color: #4b5563;
+            margin-bottom: 22px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #111827;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 7px;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .button.secondary {
+            background: #e5e7eb;
+            color: #111827;
+        }
+
+        section {
+            padding: 70px 10%;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+        }
+
+        .about {
+            background: #f7f8fa;
+        }
+
+        .about p {
+            max-width: 800px;
+            font-size: 1.05rem;
+        }
+
+        .projects {
+            background: white;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .project-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 24px;
+            transition: transform 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .project-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            margin-bottom: 14px;
+        }
+
+        .tools {
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+
+        .contact {
+            text-align: center;
+            background: #111827;
+            color: white;
+        }
+
+        .contact a {
+            color: white;
+            margin: 0 10px;
+        }
+
+        footer {
+            background: #111827;
+            color: #9ca3af;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 700px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Alden Arce-Romero</h1>
-    <p>Information Science | Data & Business Analytics</p>
 
-    <h2>About Me</h2>
-    <p>Welcome to my portfolio.</p>
+    <nav>
+        <h2>Alden Arce-Romero</h2>
 
-    <h2>Projects</h2>
-    <p>My projects will go here.</p>
+        <div>
+            <a href="#About Me">About Me</a>
+            <a href="#Projects">Projects</a>
+            <a href="#Contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Alden Arce-Romero</h1>
+
+        <h2>Information Science | Aspiring Data & Business Analyst</h2>
+
+        <p>
+            I analyze data, ask better questions, and turn findings into
+            clear insights and recommendations that help people make better decisions.
+        </p>
+
+        <div>
+            <a class="button" href="#projects">View My Projects</a>
+            <a class="button secondary" href="#contact">Contact Me</a>
+        </div>
+    </section>
+
+    <section class="About Me" id="About Me">
+        <h2>About Me</h2>
+
+        <p>
+            I am an Information Science senior at the University of Maryland
+            with a love for working with datasets, uncovering insights, and presenting
+            clear and understandable solutions. This website serves as a place for anyone
+            interested in exploring the projects and work I have completed.
+        </p>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2>Featured Projects</h2>
+
+        <div class="project-grid">
+
+            <div class="project-card">
+                <h3>Intel Energy Analysis</h3>
+
+                <p>
+                    Analyzed regional electricity production, demand, and renewable
+                    energy availability to evaluate potential locations for a future
+                    data center.
+                </p>
+
+                <p class="tools">
+                    Tableau • Data Visualization • Data Analysis
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>YouTube Trending Analysis</h3>
+
+                <p>
+                    Analyzed more than 6,000 trending videos to identify patterns
+                    in category performance, views, timing, and high-performing content.
+                </p>
+
+                <p class="tools">
+                    Excel • Data Analysis • Data Visualization
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>DoorDash Market Performance</h3>
+
+                <p>
+                    Compared delivery performance across major U.S. markets and
+                    developed recommendations based on delivery-time patterns.
+                </p>
+
+                <p class="tools">
+                    Excel • Business Analytics • Data Analysis
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Automatic Course Scheduler</h3>
+
+                <p>
+                    Built a Python application that recommends University of Maryland
+                    Information Science courses while accounting for prerequisites,
+                    scheduling conflicts, and academic priorities.
+                </p>
+
+                <p class="tools">
+                    Python • APIs • Object-Oriented Programming
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Let's Connect</h2>
+
+        <p>
+            Interested in my work or want to connect?
+        </p>
+
+        <br>
+
+        <a href="https://github.com/aarcero" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/alden-arce-romero-82314b312/" target="_blank">LinkedIn</a>
+        <a href="mailto:romero.alden@outlook.com">Email</a>
+    </section>
+
+    <footer>
+        <p>© 2026 Alden Arce-Romero</p>
+    </footer>
+
 </body>
 </html>
