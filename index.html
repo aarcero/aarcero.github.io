@@ -290,7 +290,44 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 24px;
         }
+        .project-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
 
+        .project-card-link .project-card {
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .project-preview {
+            width: 100%;
+            height: 180px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #0f172a;
+        }
+
+        .project-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .view-project {
+            display: inline-block;
+            margin-top: 8px;
+            color: #93c5fd;
+            font-weight: 600;
+        }
+
+        .project-card-link:hover .view-project {
+            text-decoration: underline;
+        }
+        
         .project-card {
             background: #1e293b;
             border: 1px solid #334155;
@@ -454,19 +491,29 @@
 
 <section class="about-skills" id="about">
 
-    <div class="about-content">
-        <h2>About Me</h2>
+            <a href="intel-energy.html" class="project-card-link">
+                <div class="project-card">
 
-        <p>
-            I am an Information Science senior at the University of Maryland
-            with a love for working with datasets, uncovering insights, and presenting
-            clear and understandable solutions. This portfolio is a collection of the projects
-            and work that I have completed throughout my academic and professional journey.
-        </p>
-    </div>
+                    <div class="project-preview intel-preview">
+                        <img src="intel-preview.png" alt="Intel Energy Analysis Dashboard">
+                    </div>
 
+                    <h3>Intel Energy Analysis</h3>
 
-    <div class="skills-content">
+                    <p>
+                        Analyzed regional electricity production, demand, and renewable
+                        energy availability to evaluate potential locations for a future
+                        data center.
+                    </p>
+
+                    <p class="tools">
+                        Tableau • Data Visualization • Data Analysis
+                    </p>
+
+                    <span class="view-project">View Project →</span>
+
+                </div>
+            </a>
 
         <h2>Skills</h2>
 
