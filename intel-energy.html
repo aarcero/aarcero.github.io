@@ -1,39 +1,231 @@
-            <div class='tableauPlaceholder' id='viz1789009469353' style='position: relative'>
-                <noscript>
-                    <a href='#'>
-                        <img alt='Intel Energy Analysis Dashboard'
-                            src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;Completed_Intel-Student&#47;Dashboard&#47;1_rss.png'
-                            style='border: none' />
-                    </a>
-                </noscript>
+<!DOCTYPE html>
+<html lang="en">
 
-                <object class='tableauViz' style='display:none;'>
-                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                    <param name='embed_code_version' value='3' />
-                    <param name='site_root' value='' />
-                    <param name='name' value='Completed_Intel-Student&#47;Dashboard' />
-                    <param name='tabs' value='yes' />
-                    <param name='toolbar' value='yes' />
-                    <param name='static_image'
-                        value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;Completed_Intel-Student&#47;Dashboard&#47;1.png' />
-                    <param name='animate_transition' value='yes' />
-                    <param name='display_static_image' value='yes' />
-                    <param name='display_spinner' value='yes' />
-                    <param name='display_overlay' value='yes' />
-                    <param name='display_count' value='yes' />
-                    <param name='language' value='en-US' />
-                </object>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            <script type='text/javascript'>
-                var divElement = document.getElementById('viz1789009469353');
-                var vizElement = divElement.getElementsByTagName('object')[0];
+    <title>Intel Energy Analysis | Alden Arce-Romero</title>
 
-                vizElement.style.width = '100%';
-                vizElement.style.height = '500px';
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-                var scriptElement = document.createElement('script');
-                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
 
-                vizElement.parentNode.insertBefore(scriptElement, vizElement);
-            </script>
+        nav {
+            background: #111827;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: #cbd5e1;
+        }
+
+        .project-header {
+            padding: 70px 10% 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .project-header h1 {
+            font-size: 2.7rem;
+            margin-bottom: 15px;
+        }
+
+        .project-header p {
+            max-width: 850px;
+            color: #cbd5e1;
+            font-size: 1.1rem;
+        }
+
+        .project-tools {
+            margin-top: 20px;
+            color: #94a3b8;
+        }
+
+        .visualization-section {
+            padding: 20px 5% 70px;
+        }
+
+        .tableau-container {
+            width: 850px;
+            max-width: 100%;
+            height: 500px;
+            margin: auto;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        tableau-viz {
+            display: block;
+            width: 100%;
+            height: 500px;
+        }
+
+        .analysis-section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px 10% 80px;
+        }
+
+        .analysis-section h2 {
+            margin-top: 40px;
+            margin-bottom: 12px;
+            font-size: 1.7rem;
+        }
+
+        .analysis-section p {
+            color: #cbd5e1;
+        }
+
+        footer {
+            background: #111827;
+            text-align: center;
+            padding: 25px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 900px) {
+
+            .tableau-container {
+                width: 100%;
+                height: 500px;
+            }
+
+            tableau-viz {
+                width: 100%;
+                height: 500px;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 20px 5%;
+            }
+
+            .project-header {
+                padding: 50px 5% 30px;
+            }
+
+            .project-header h1 {
+                font-size: 2rem;
+            }
+
+            .visualization-section {
+                padding: 20px 3% 50px;
+            }
+
+            .analysis-section {
+                padding: 20px 5% 60px;
+            }
+        }
+    </style>
+
+    <script
+        type="module"
+        src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js">
+    </script>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <a href="index.html">
+            <strong>Alden Arce-Romero</strong>
+        </a>
+
+        <a class="back-link" href="index.html#projects">
+            ← Back to Projects
+        </a>
+
+    </nav>
+
+
+    <section class="project-header">
+
+        <h1>Intel Energy Analysis</h1>
+
+        <p>
+            Analyzed regional electricity production, demand, and renewable energy
+            availability to evaluate potential locations for a future data center.
+        </p>
+
+        <p class="project-tools">
+            Tableau • Data Visualization • Data Analysis
+        </p>
+
+    </section>
+
+
+    <section class="visualization-section">
+
+        <div class="tableau-container">
+
+            <tableau-viz
+                id="tableau-viz"
+                src="https://public.tableau.com/views/Completed_Intel-Student/Dashboard"
+                width="850px"
+                height="500px"
+                toolbar="bottom">
+            </tableau-viz>
+
+        </div>
+
+    </section>
+
+
+    <section class="analysis-section">
+
+        <h2>Project Overview</h2>
+
+        <p>
+            This project examined electricity production and demand across different
+            U.S. regions to understand where energy infrastructure could best support
+            the operation of a data center.
+        </p>
+
+
+        <h2>Key Findings</h2>
+
+        <p>
+            Findings will be added here.
+        </p>
+
+
+        <h2>Recommendation</h2>
+
+        <p>
+            Recommendation will be added here.
+        </p>
+
+    </section>
+
+
+    <footer>
+        © 2026 Alden Arce-Romero
+    </footer>
+
+</body>
+
+</html>
