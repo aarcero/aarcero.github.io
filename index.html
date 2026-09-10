@@ -445,6 +445,30 @@
                 max-width: 420px;
                 height: 210px;
             }
+                   
+            .projects {
+                padding-left: 6%;
+                padding-right: 6%;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+                width: 100%;
+            }
+
+            .project-card-link {
+                width: 100%;
+            }
+
+            .project-card {
+                width: 100%;
+                height: auto;
+            }
+
+            .project-preview {
+                width: 100%;
+                height: 180px;
+            }
         }
     </style>
 </head>
@@ -554,24 +578,8 @@
 
         <div class="project-grid">
 
-            <div class="project-card">
-                <h3>Intel Energy Analysis</h3>
-
-                <p>
-                    Analyzed regional electricity production, demand, and renewable
-                    energy availability to evaluate potential locations for a future
-                    data center.
-                </p>
-
-                <p class="tools">
-                    Tableau • Data Visualization • Data Analysis
             <a href="intel-energy.html" class="project-card-link">
-
                 <div class="project-card">
-
-                    <div class="project-preview">
-                        <img src="intel-preview.png" alt="Intel Energy Analysis Dashboard">
-                    </div>
 
                     <h3>Intel Energy Analysis</h3>
 
@@ -585,13 +593,14 @@
                         Tableau • Data Visualization • Data Analysis
                     </p>
 
+                    <div class="project-preview">
+                        <img src="intel-preview.png" alt="Intel Energy Analysis Dashboard">
+                    </div>
+
                     <span class="view-project">View Project →</span>
 
                 </div>
-
             </a>
-                </p>
-            </div>
 
             <div class="project-card">
                 <h3>DoorDash Market Performance</h3>
