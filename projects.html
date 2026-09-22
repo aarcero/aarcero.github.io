@@ -106,6 +106,26 @@
             display: block;
         }
 
+        .youtube-preview-grid {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 3px;
+        }
+
+        .youtube-preview-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .youtube-preview-grid img:first-child {
+            grid-row: 1 / 3;
+        }
+
         .other-project-card h3 {
             color: #f8fafc;
             margin-bottom: 10px;
@@ -165,18 +185,33 @@
             <div class="other-project-card">
 
                 <div class="other-project-preview">
-                    Preview Coming Soon
+
+                    <div class="youtube-preview-grid">
+
+                        <img src="youtube-preview.png"
+                             alt="YouTube Trending Analysis">
+
+                        <img src="youtube-preview2.png"
+                             alt="YouTube Trending Analysis">
+
+                        <img src="youtube-preview3.png"
+                             alt="YouTube Trending Analysis">
+
+                    </div>
+
                 </div>
 
                 <h3>YouTube Trending Analysis</h3>
 
                 <p>
-                    Analyzed YouTube trending data to identify patterns in
-                    video performance, categories, and audience engagement.
+                    Analyzed over 6,000 trending YouTube videos to examine video
+                    performance across content categories. Used summary statistics
+                    and PivotTables to compare average views and identify
+                    exceptionally high-performing videos.
                 </p>
 
                 <p class="tools">
-                    Excel • Data Analysis • Pivot Tables
+                    Excel • PivotTables • Data Analysis
                 </p>
 
             </div>
@@ -193,37 +228,17 @@
                 <h3>BART Ridership Analysis</h3>
 
                 <p>
-                    Analyzed BART ridership patterns to compare weekday and
-                    weekend travel and understand downtown station activity.
+                    Analyzed BART ridership data to compare weekday and weekend
+                    travel patterns and evaluate downtown station activity. Used
+                    ridership metrics to identify patterns in passenger demand.
                 </p>
 
                 <p class="tools">
-                    Excel • Data Analysis • Pivot Tables
+                    Excel • PivotTables • Data Analysis
                 </p>
 
             </div>
 
-
-            <!-- DoorDash Market Performance -->
-
-            <div class="other-project-card">
-
-                <div class="other-project-preview">
-                    Preview Coming Soon
-                </div>
-
-                <h3>DoorDash Market Performance</h3>
-
-                <p>
-                    Compared delivery performance across major U.S. markets
-                    and developed recommendations based on delivery-time patterns.
-                </p>
-
-                <p class="tools">
-                    Excel • Business Analytics • Data Analysis
-                </p>
-
-            </div>
 
             <!-- H&M Email A/B Test -->
 
@@ -236,8 +251,10 @@
                 <h3>H&amp;M Email A/B Test</h3>
 
                 <p>
-                    Analyzed email campaign performance using A/B testing to
-                    determine whether changes improved customer engagement.
+                    Conducted an A/B test to determine whether a test email improved
+                    customer open rates compared with the control. Measured a
+                    1.58 percentage-point lift and evaluated whether the improvement
+                    was statistically significant.
                 </p>
 
                 <p class="tools">
@@ -258,12 +275,13 @@
                 <h3>Warby Parker A/B Test</h3>
 
                 <p>
-                    Evaluated experimental results to determine whether differences
-                    between test groups were statistically significant.
+                    Evaluated an A/B experiment using statistical hypothesis testing
+                    to determine whether the difference between the control and test
+                    groups was statistically significant.
                 </p>
 
                 <p class="tools">
-                    Excel • A/B Testing • Statistical Analysis
+                    Excel • A/B Testing • Hypothesis Testing
                 </p>
 
             </div>
@@ -280,12 +298,13 @@
                 <h3>UFO Sightings Analysis</h3>
 
                 <p>
-                    Visualized UFO sighting data to identify geographic patterns
-                    and compare reported sightings across U.S. states.
+                    Used calculated fields in Tableau to clean and transform UFO
+                    sighting data. Visualized sightings by state, country, month,
+                    shape, and time of day to identify geographic and temporal patterns.
                 </p>
 
                 <p class="tools">
-                    Tableau • Data Visualization • Data Analysis
+                    Tableau • Calculated Fields • Data Visualization
                 </p>
 
             </div>
@@ -302,12 +321,13 @@
                 <h3>Forbes Earnings Analysis</h3>
 
                 <p>
-                    Created visualizations to analyze earnings data and communicate
-                    patterns among high-earning entertainers.
+                    Analyzed Forbes celebrity earnings data from 2005–2020 to examine
+                    compensation differences between actors and actresses. Compared
+                    average earnings, top earners, and changes in the pay gap over time.
                 </p>
 
                 <p class="tools">
-                    Tableau • Data Visualization • Data Analysis
+                    Tableau • Data Visualization • Comparative Analysis
                 </p>
 
             </div>
@@ -324,8 +344,9 @@
                 <h3>Billboard &amp; Spotify Analysis</h3>
 
                 <p>
-                    Analyzed music data using Billboard and Spotify datasets to
-                    explore relationships between music characteristics and performance.
+                    Analyzed Billboard Hot 100 and Spotify audio-feature data to
+                    explore music trends and relationships between song characteristics
+                    and performance. Used visual analysis to compare patterns across songs.
                 </p>
 
                 <p class="tools">
@@ -346,12 +367,13 @@
                 <h3>Super Bowl Analytics</h3>
 
                 <p>
-                    Analyzed Super Bowl television ratings and advertising data
-                    to visualize trends and relationships over time.
+                    Analyzed Super Bowl television ratings and advertising costs over
+                    time. Created visualizations to examine historical trends and the
+                    relationship between audience ratings and advertising prices.
                 </p>
 
                 <p class="tools">
-                    Tableau • Data Visualization • Data Analysis
+                    Tableau • Trend Analysis • Data Visualization
                 </p>
 
             </div>
@@ -368,17 +390,19 @@
                 <h3>NYC Green Taxi Analysis</h3>
 
                 <p>
-                    Analyzed New York City Green Taxi data to explore trip and
-                    fare patterns using real-world transportation data.
+                    Analyzed New York City Green Taxi trip data to explore transportation
+                    patterns using a large real-world dataset. Examined trip and fare
+                    information to identify patterns in taxi activity.
                 </p>
 
                 <p class="tools">
-                    Data Analysis • Data Visualization
+                    Data Analysis • Data Visualization • Transportation Data
                 </p>
 
             </div>
 
-            <!-- UNESCO Analysis -->
+
+            <!-- UNESCO Heritage Sites Analysis -->
 
             <div class="other-project-card">
 
@@ -386,21 +410,22 @@
                     Preview Coming Soon
                 </div>
 
-                <h3>UNESCO Analysis</h3>
+                <h3>UNESCO Heritage Sites Analysis</h3>
 
                 <p>
-                    Analyzed and visualized UNESCO data to identify patterns
-                    and communicate findings through data visualization.
+                    Analyzed UNESCO World Heritage Site data to compare cultural,
+                    natural, and mixed sites. Examined endangered sites, geographic
+                    distribution, and the physical area dedicated to heritage sites.
                 </p>
 
                 <p class="tools">
-                    Tableau • Data Visualization • Data Analysis
+                    Tableau • Filters • Data Visualization
                 </p>
 
             </div>
 
 
-            <!-- Visualization Storytelling -->
+            <!-- Data Visualization Storytelling -->
 
             <div class="other-project-card">
 
@@ -411,8 +436,9 @@
                 <h3>Data Visualization Storytelling</h3>
 
                 <p>
-                    Applied data visualization and storytelling techniques to
-                    communicate insights clearly through visual analysis.
+                    Built visualizations using global height, music sales, and video
+                    game datasets. Used choropleth maps, line charts, and bar charts
+                    to communicate patterns across multiple datasets.
                 </p>
 
                 <p class="tools">
@@ -433,12 +459,13 @@
                 <h3>Terracotta Analysis</h3>
 
                 <p>
-                    Analyzed data in Excel to identify patterns and develop
-                    insights using spreadsheet analysis techniques.
+                    Used Excel to organize and analyze data with PivotTables and
+                    summary calculations. Compared categories and summarized results
+                    to identify patterns and communicate findings from the dataset.
                 </p>
 
                 <p class="tools">
-                    Excel • Data Analysis
+                    Excel • PivotTables • Data Analysis
                 </p>
 
             </div>
@@ -455,16 +482,17 @@
                 <h3>Winter Sports Analysis</h3>
 
                 <p>
-                    Analyzed winter sports data in Excel to identify trends
-                    and communicate findings through data analysis.
+                    Analyzed search-interest data for winter sports and compared
+                    changes in popularity over time. Created charts to examine trends
+                    and differences between sports such as hockey and snowboarding.
                 </p>
 
                 <p class="tools">
-                    Excel • Data Analysis • Data Visualization
+                    Excel • Trend Analysis • Data Visualization
                 </p>
 
             </div>
-            
+
         </div>
 
     </section>
