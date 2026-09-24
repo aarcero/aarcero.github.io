@@ -276,6 +276,7 @@
                 max-width: 520px;
             }
         }
+
         .projects {
             background: #0f172a;
         }
@@ -290,6 +291,7 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 24px;
         }
+
         .project-card-link {
             text-decoration: none;
             color: inherit;
@@ -444,6 +446,13 @@
             margin: 0 10px;
         }
 
+        #email-copy-message {
+            color: #93c5fd;
+            font-size: 0.9rem;
+            margin-top: 12px;
+            min-height: 22px;
+        }
+
         footer {
             background: #111827;
             color: #9ca3af;
@@ -451,7 +460,7 @@
             padding: 20px;
         }
 
-               @media (max-width: 768px) {
+        @media (max-width: 768px) {
 
             nav {
                 padding: 18px 6%;
@@ -564,93 +573,93 @@
         </div>
     </nav>
 
-<section class="hero">
+    <section class="hero">
 
-    <div class="hero-content">
+        <div class="hero-content">
 
-        <div class="hero-text">
-            <h1>Alden Arce-Romero</h1>
+            <div class="hero-text">
+                <h1>Alden Arce-Romero</h1>
 
-            <h2>Information Science | Aspiring Data & Business Analyst</h2>
+                <h2>Information Science | Aspiring Data & Business Analyst</h2>
+
+                <p>
+                    I analyze data, ask better questions, and turn findings into
+                    clear insights and recommendations that help people make better decisions.
+                </p>
+
+                <div>
+                    <a class="button" href="#projects">View My Projects</a>
+                    <a class="button secondary" href="#contact">Contact Me</a>
+                </div>
+            </div>
+        
+            <div class="profile-card">
+                <img src="profile.png" alt="Alden Arce-Romero">
+            </div>
+       
+        </div>
+
+    </section>
+
+    <section class="about-skills" id="about">
+
+        <div class="about-content">
+            <h2>About Me</h2>
 
             <p>
-                I analyze data, ask better questions, and turn findings into
-                clear insights and recommendations that help people make better decisions.
+                I am an Information Science senior at the University of Maryland
+                with a love for working with datasets, uncovering insights, and presenting
+                clear and understandable solutions. This portfolio is a collection of the projects
+                and work that I have completed throughout my academic and professional journey.
             </p>
-
-            <div>
-                <a class="button" href="#projects">View My Projects</a>
-                <a class="button secondary" href="#contact">Contact Me</a>
-            </div>
         </div>
-        
-        <div class="profile-card">
-            <img src="profile.png" alt="Alden Arce-Romero">
-        </div>
-       
-    </div>
 
-</section>
+        <div class="skills-content">
 
-<section class="about-skills" id="about">
+            <h2>Skills</h2>
 
-    <div class="about-content">
-        <h2>About Me</h2>
+            <div class="skills-orbit">
 
-        <p>
-            I am an Information Science senior at the University of Maryland
-            with a love for working with datasets, uncovering insights, and presenting
-            clear and understandable solutions. This portfolio is a collection of the projects
-            and work that I have completed throughout my academic and professional journey.
-        </p>
-    </div>
+                <div class="skill skill-1">
+                    <img src="excel.jpg" alt="Excel logo">
+                    <span>Excel</span>
+                </div>
 
-    <div class="skills-content">
+                <div class="skill skill-2">
+                    <img src="tableau.png" alt="Tableau logo">
+                    <span>Tableau</span>
+                </div>
 
-        <h2>Skills</h2>
+                <div class="skill skill-3">
+                    <img src="python.png" alt="Python logo">
+                    <span>Python</span>
+                </div>
 
-        <div class="skills-orbit">
+                <div class="skill skill-4">
+                    <img src="r.png" alt="R logo">
+                    <span>R</span>
+                </div>
 
-            <div class="skill skill-1">
-                <img src="excel.jpg" alt="Excel logo">
-                <span>Excel</span>
-            </div>
+                <div class="skill skill-5">
+                    <img src="github.png" alt="GitHub logo">
+                    <span>GitHub</span>
+                </div>
 
-            <div class="skill skill-2">
-                <img src="tableau.png" alt="Tableau logo">
-                <span>Tableau</span>
-            </div>
+                <div class="skill skill-6">
+                    <img src="linux.png" alt="Linux logo">
+                    <span>Linux</span>
+                </div>
 
-            <div class="skill skill-3">
-                <img src="python.png" alt="Python logo">
-                <span>Python</span>
-            </div>
+                <div class="skill skill-7">
+                    <img src="sql.png" alt="SQL logo">
+                    <span>SQL</span>
+                </div>
 
-            <div class="skill skill-4">
-                <img src="r.png" alt="R logo">
-                <span>R</span>
-            </div>
-
-            <div class="skill skill-5">
-                <img src="github.png" alt="GitHub logo">
-                <span>GitHub</span>
-            </div>
-
-            <div class="skill skill-6">
-                <img src="linux.png" alt="Linux logo">
-                <span>Linux</span>
-            </div>
-
-            <div class="skill skill-7">
-                <img src="sql.png" alt="SQL logo">
-                <span>SQL</span>
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
     
     <section class="projects" id="projects">
         <h2>Featured Projects</h2>
@@ -681,28 +690,28 @@
                 </div>
             </a>
 
-        <a href="grammy-capstone.html" class="project-card-link">
-            <div class="project-card">
+            <a href="grammy-capstone.html" class="project-card-link">
+                <div class="project-card">
 
-                        <img src="grammy-preview.png"
-                             alt="Grammy Website Performance Analysis preview"
-                             class="project-preview">
+                    <img src="grammy-preview.png"
+                         alt="Grammy Website Performance Analysis preview"
+                         class="project-preview">
                 
-                <h3>Grammy Website Performance Analysis</h3>
+                    <h3>Grammy Website Performance Analysis</h3>
 
-                <p>
-                    Analyzed Grammy.com and RecordingAcademy.com website performance,
-                    user engagement, mobile traffic, and A/B testing results to evaluate
-                    the website split and develop business recommendations.
-                </p>
+                    <p>
+                        Analyzed Grammy.com and RecordingAcademy.com website performance,
+                        user engagement, mobile traffic, and A/B testing results to evaluate
+                        the website split and develop business recommendations.
+                    </p>
 
-                <p class="tools">
-                    Excel • A/B Testing • Pivot Tables • Formulas
-                </p>
+                    <p class="tools">
+                        Excel • A/B Testing • Pivot Tables • Formulas
+                    </p>
 
-                <span class="view-project">View Project →</span>
-            </div>
-        </a>
+                    <span class="view-project">View Project →</span>
+                </div>
+            </a>
             
             <div class="project-card">
                 <h3>DoorDash Market Performance</h3>
@@ -739,7 +748,7 @@
         
     </section>
 
-     <!-- PASTE OTHER PROJECTS HTML HERE -->
+    <!-- PASTE OTHER PROJECTS HTML HERE -->
     
     <section class="contact" id="contact">
         <h2>Let's Connect</h2>
@@ -752,12 +761,36 @@
 
         <a href="https://github.com/aarcero" target="_blank">GitHub</a>
         <a href="https://www.linkedin.com/in/alden-arce-romero-82314b312/" target="_blank">LinkedIn</a>
-        <a href="mailto:romero.alden@outlook.com">Email</a>
+        <a href="#" id="copy-email">Email</a>
+
+        <p id="email-copy-message"></p>
     </section>
 
     <footer>
         <p>© 2026 Alden Arce-Romero</p>
     </footer>
+
+    <script>
+        const emailLink = document.getElementById("copy-email");
+        const emailMessage = document.getElementById("email-copy-message");
+
+        emailLink.addEventListener("click", async function(event) {
+            event.preventDefault();
+
+            try {
+                await navigator.clipboard.writeText("romero.alden@outlook.com");
+
+                emailMessage.textContent = "✓ Email copied to clipboard!";
+
+                setTimeout(function() {
+                    emailMessage.textContent = "";
+                }, 2500);
+
+            } catch (error) {
+                emailMessage.textContent = "Unable to copy email.";
+            }
+        });
+    </script>
 
 </body>
 </html>
