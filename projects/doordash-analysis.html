@@ -1,1 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DoorDash Market Performance | Alden Arce-Romero</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: #111827;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: #cbd5e1;
+        }
+
+        .project-header {
+            padding: 70px 10% 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .project-header h1 {
+            font-size: 2.7rem;
+            margin-bottom: 15px;
+        }
+
+        .project-header p {
+            max-width: 850px;
+            color: #cbd5e1;
+            font-size: 1.1rem;
+        }
+
+        .project-tools {
+            margin-top: 20px;
+            color: #94a3b8;
+        }
+
+        .workbook-section {
+            padding: 20px 5% 70px;
+        }
+
+        .excel-container {
+            width: 100%;
+            max-width: 1000px;
+            height: 600px;
+            margin: auto;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .excel-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        .analysis-section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px 10% 80px;
+        }
+
+        .analysis-section h2 {
+            margin-top: 40px;
+            margin-bottom: 12px;
+            font-size: 1.7rem;
+        }
+
+        .analysis-section p {
+            color: #cbd5e1;
+            margin-bottom: 18px;
+        }
+
+        footer {
+            background: #111827;
+            text-align: center;
+            padding: 25px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 768px) {
+
+            nav {
+                padding: 18px 6%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .project-header {
+                padding: 50px 6% 30px;
+            }
+
+            .project-header h1 {
+                font-size: 2rem;
+            }
+
+            .workbook-section {
+                padding: 20px 3% 50px;
+            }
+
+            .excel-container {
+                height: 500px;
+            }
+
+            .analysis-section {
+                padding: 20px 6% 60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+
+        <a href="../index.html">
+            <strong>Alden Arce-Romero</strong>
+        </a>
+
+        <a class="back-link" href="../index.html#projects">
+            ← Back to Projects
+        </a>
+
+    </nav>
+
+
+    <section class="project-header">
+
+        <h1>DoorDash Market Performance</h1>
+
+        <p>
+            Analyzed DoorDash delivery data across major U.S. markets to compare
+            delivery performance, order activity, and customer demand and develop
+            data-driven business recommendations.
+        </p>
+
+        <p class="project-tools">
+            Excel • PivotTables • Data Analysis • Data Visualization • Business Analysis
+        </p>
+
+    </section>
+
+
+    <section class="workbook-section">
+
+        <div class="excel-container">
+
+            <iframe
+                src="https://1drv.ms/x/c/edb53092e691307b/IQSVxDS-W0SHT7xHNz4HRbwWAeC5FgN_lChbu9BxZsXPOvg"
+                frameborder="0"
+                scrolling="no">
+            </iframe>
+
+        </div>
+
+    </section>
+
+
+    <section class="analysis-section">
+
+        <h2>Project Overview</h2>
+
+        <p>
+            This project analyzed DoorDash delivery data across Boston, Chicago,
+            Los Angeles, New York City, San Francisco, and Seattle. Using Excel,
+            I compared order volume, delivery times, order prices, and cuisine
+            preferences to identify differences in market performance and develop
+            recommendations for improving operations and customer demand.
+        </p>
+
+
+        <h2>Key Findings</h2>
+
+        <p>
+            Across 50,036 orders, the average delivery time was approximately
+            49.9 minutes. Delivery performance varied across markets, with Boston
+            and New York City averaging approximately 48 minutes while San
+            Francisco had the longest average delivery time at approximately
+            55 minutes.
+        </p>
+
+        <p>
+            New York City had the highest order volume with 14,343 orders,
+            followed by Chicago with 11,785 and San Francisco with 9,310.
+            Seattle had the lowest order volume among the markets analyzed with
+            3,945 orders. Chicago also had the highest average order price.
+        </p>
+
+        <p>
+            Cuisine analysis showed differences in customer preferences across
+            markets. American cuisine was the most popular overall, while Seattle
+            had the highest percentage of sandwich-shop orders. These differences
+            demonstrate how customer demand can vary between individual markets.
+        </p>
+
+
+        <h2>Recommendations</h2>
+
+        <p>
+            Based on the analysis, I recommended using driver incentives in
+            San Francisco to help address its longer average delivery times.
+            Increasing driver availability during periods of high demand could
+            help reduce delivery times and improve customer experience.
+        </p>
+
+        <p>
+            I also recommended using consumer incentives in Seattle to encourage
+            additional orders because it had the lowest order volume among the
+            markets analyzed. Promotions could focus on popular cuisine categories,
+            including pizza and Mexican food, while market-specific preferences
+            could be used to further tailor promotional strategies.
+        </p>
+
+    </section>
+
+
+    <footer>
+        © 2026 Alden Arce-Romero
+    </footer>
+
+</body>
+
+</html>
