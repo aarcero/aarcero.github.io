@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resume | Alden Arce-Romero</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: #111827;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: #cbd5e1;
+        }
+
+        .resume-header {
+            max-width: 1100px;
+            margin: auto;
+            padding: 70px 0 45px;
+        }
+
+        .resume-header h1 {
+            font-size: 2.7rem;
+            margin-bottom: 8px;
+        }
+
+        .resume-header .subtitle {
+            color: #cbd5e1;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+        }
+
+        .resume-button {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 7px;
+            font-weight: 600;
+        }
+
+        .resume-button:hover {
+            background: #1d4ed8;
+        }
+
+        .resume-content {
+            max-width: 1100px;
+            margin: auto;
+            padding-bottom: 80px;
+        }
+
+        .resume-section {
+            margin-bottom: 55px;
+        }
+
+        .resume-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 22px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #334155;
+        }
+
+        .resume-entry {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 24px;
+            margin-bottom: 18px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 5px;
+        }
+
+        .entry-header h3 {
+            font-size: 1.15rem;
+        }
+
+        .date {
+            color: #94a3b8;
+            white-space: nowrap;
+        }
+
+        .entry-subtitle {
+            color: #cbd5e1;
+            margin-bottom: 14px;
+        }
+
+        .resume-entry ul {
+            padding-left: 20px;
+            color: #cbd5e1;
+        }
+
+        .resume-entry li {
+            margin-bottom: 8px;
+        }
+
+        .project-tools {
+            color: #93c5fd;
+            margin-bottom: 14px;
+            font-size: 0.95rem;
+        }
+
+        .project-link {
+            color: #93c5fd;
+            text-decoration: none;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        .skills-group {
+            margin-bottom: 12px;
+            color: #cbd5e1;
+        }
+
+        .skills-group strong {
+            color: #f8fafc;
+        }
+
+        footer {
+            background: #111827;
+            text-align: center;
+            padding: 25px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 1200px) {
+
+            .resume-header,
+            .resume-content {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 18px 6%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .resume-header {
+                padding: 50px 0 35px;
+            }
+
+            .resume-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .entry-header {
+                flex-direction: column;
+                gap: 3px;
+            }
+
+            .date {
+                white-space: normal;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <a href="index.html">
+            <strong>Alden Arce-Romero</strong>
+        </a>
+
+        <a class="back-link" href="index.html">
+            ← Back to Portfolio
+        </a>
+
+    </nav>
+
+
+    <header class="resume-header">
+
+        <h1>Resume</h1>
+
+        <p class="subtitle">
+            Information Science | Data & Business Analytics
+        </p>
+
+        <a class="resume-button"
+           href="documents/resume.pdf"
+           target="_blank">
+            View PDF Resume
+        </a>
+
+    </header>
+
+
+    <main class="resume-content">
+
+
+        <!-- EDUCATION -->
+
+        <section class="resume-section">
+
+            <h2>Education</h2>
+
+            <div class="resume-entry">
+
+                <div class="entry-header">
+                    <h3>University of Maryland</h3>
+                    <span class="date">Expected May 2027</span>
+                </div>
+
+                <p class="entry-subtitle">
+                    Bachelor of Science, Information Science • GPA: 3.57/4.00
+                </p>
+
+            </div>
+
+
+            <div class="resume-entry">
+
+                <div class="entry-header">
+                    <h3>Prince George's Community College</h3>
+                    <span class="date">December 2024</span>
+                </div>
+
+                <p class="entry-subtitle">
+                    Associate of Science, Business Administration • High Honors • GPA: 3.80/4.00
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- EXPERIENCE -->
+
+        <section class="resume-section">
+
+            <h2>Experience</h2>
+
+
+            <div class="resume-entry">
+
+                <div class="entry-header">
+                    <h3>Data Analytics Trainee</h3>
+                    <span class="date">June 2026 – August 2026</span>
+                </div>
+
+                <p class="entry-subtitle">
+                    Global Career Accelerator • Remote
+                </p>
+
+                <ul>
+                    <li>
+                        Completed two industry capstone projects analyzing real-world
+                        datasets for the Grammy Recording Academy and Intel, delivering
+                        findings through interactive dashboards and data-driven presentations.
+                    </li>
+
+                    <li>
+                        Performed data cleaning, dashboard development, and statistical
+                        analysis across 10+ real-world business datasets using Excel and
+                        Tableau.
+                    </li>
+
+                    <li>
+                        Delivered actionable recommendations through interactive dashboards
+                        and structured presentations simulating stakeholder communication
+                        with industry clients.
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="resume-entry">
+
+                <div class="entry-header">
+                    <h3>Shift Lead</h3>
+                    <span class="date">November 2022 – August 2023</span>
+                </div>
+
+                <p class="entry-subtitle">
+                    Best Buy • College Park, MD
+                </p>
+
+                <ul>
+                    <li>
+                        Mentored sales associates on consultative selling techniques,
+                        increasing accessory attachment rates by 30–40% and contributing
+                        approximately $80,000 in additional monthly sales.
+                    </li>
+
+                    <li>
+                        Maintained the store's #1 district sales ranking by supporting
+                        daily operations, coaching team members, and ensuring exceptional
+                        customer experiences.
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PROJECTS -->
+
+        <section class="resume-section">
+
+            <h2>Projects</h2>
+
+
+            <div class="resume-entry">
+
+                <div class="entry-header">
+                    <h3>Grammy Website Performance Analysis</h3>
+                </div>
+
+                <p class="project-tools">
+                    Excel
+                </p>
+
+                <ul>
+                    <li>
+                        Analyzed real website performance data following the 2022
+                        separation of Grammy.com and RecordingAcademy.com, evaluating
+                        engagement KPIs and mobile visitor behavior to assess the
+                        business impact of the split.
+                    </li>
+
+                    <li>
+                        Applied advanced Excel analytics including PivotTables, XLOOKUP,
+                        SUMIFS, AVERAGEIFS, and conditional logic to develop data-driven
+                        business recommendations presented to industry clients.
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="resume-entry">
+
+                <div class="entry-header">
+                    <h3>Intel Data Center Sustainability Analysis</h3>
+                </div>
+
+                <p class="project-tools">
+                    Tableau
+                </p>
+
+                <ul>
+                    <li>
+                        Analyzed real regional energy production, demand, and renewable
+                        energy trends to recommend a sustainable location for a proposed
+                        Intel data center based on energy availability and sustainability.
+                    </li>
+
+                    <li>
+                        Built an interactive Tableau dashboard using calculated fields,
+                        parameters, filters, and multiple visualization types to compare
+                        energy surplus, generation and demand trends, and renewable energy
+                        availability across regions.
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="resume-entry">
+
+                <div class="entry-header">
+
+                    <h3>
+                        Automatic Course Scheduler
+                    </h3>
+
+                </div>
+
+                <p class="project-tools">
+                    Python • REST API • JSON • Regular Expressions
+                </p>
+
+                <ul>
+                    <li>
+                        Developed a Python command-line application that automatically
+                        evaluated hundreds of potential course combinations to generate
+                        conflict-free semester schedules using the University of Maryland
+                        Testudo API.
+                    </li>
+
+                    <li>
+                        Piloted the application with 5 students, validating prerequisite
+                        checking, time-conflict detection, and advisor recommendation
+                        features using object-oriented programming, regular expressions,
+                        and JSON processing.
+                    </li>
+
+                    <li>
+                        Improved scheduling efficiency by automatically prioritizing
+                        required coursework while minimizing manual planning.
+                    </li>
+                </ul>
+
+                <br>
+
+                <a class="project-link"
+                   href="https://github.com/aarcero/INST326_Final_Project"
+                   target="_blank">
+                    View Project on GitHub →
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CERTIFICATIONS -->
+
+        <section class="resume-section">
+
+            <h2>Certifications</h2>
+
+            <div class="resume-entry">
+
+                <p>
+                    <strong>Global Career Accelerator</strong>
+                </p>
+
+                <p class="entry-subtitle">
+                    Data Analytics • Data Visualization • Intercultural Skills • AI Professional Skills
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SKILLS -->
+
+        <section class="resume-section">
+
+            <h2>Skills</h2>
+
+            <div class="resume-entry">
+
+                <p class="skills-group">
+                    <strong>Data Analytics:</strong>
+                    Excel, Tableau, Statistical Analysis, Dashboard Development,
+                    Data Cleaning, Data Visualization, Business Intelligence
+                </p>
+
+                <p class="skills-group">
+                    <strong>Programming Languages:</strong>
+                    Python, R, SQL
+                </p>
+
+                <p class="skills-group">
+                    <strong>Developer Tools:</strong>
+                    Git, GitHub, VS Code
+                </p>
+
+                <p class="skills-group">
+                    <strong>Operating Systems:</strong>
+                    Linux (Debian), Windows, macOS
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        © 2026 Alden Arce-Romero
+    </footer>
+
+</body>
+
+</html>
