@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Automatic Course Scheduler | Alden Arce-Romero</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: #111827;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: #cbd5e1;
+        }
+
+        .project-header {
+            padding: 70px 0 40px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .project-header h1 {
+            font-size: 2.7rem;
+            margin-bottom: 15px;
+        }
+
+        .project-header p {
+            max-width: 850px;
+            color: #cbd5e1;
+            font-size: 1.1rem;
+        }
+
+        .project-tools {
+            margin-top: 20px;
+            color: #94a3b8;
+        }
+
+        .github-button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 11px 20px;
+            background: #1e293b;
+            border: 1px solid #475569;
+            border-radius: 7px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .github-button:hover {
+            background: #334155;
+        }
+
+        .analysis-section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px 0 80px;
+        }
+
+        .analysis-section h2 {
+            margin-top: 45px;
+            margin-bottom: 12px;
+            font-size: 1.7rem;
+        }
+
+        .analysis-section p {
+            color: #cbd5e1;
+            margin-bottom: 18px;
+        }
+
+        .workflow {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 20px;
+        }
+
+        .workflow-step {
+            text-align: center;
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 15px 20px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .workflow-step strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .workflow-step span {
+            color: #cbd5e1;
+        }
+
+        .workflow-arrow {
+            text-align: center;
+            color: #93c5fd;
+            font-size: 1.5rem;
+            padding: 7px 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .feature-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 22px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .feature-card p {
+            margin-bottom: 0;
+            color: #cbd5e1;
+        }
+
+        .priority-box {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 20px;
+        }
+
+        .priority-row {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 15px;
+        }
+
+        .priority-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .priority-number {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: #0f172a;
+            border: 1px solid #475569;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: #93c5fd;
+            font-weight: bold;
+        }
+
+        .priority-text strong {
+            display: block;
+        }
+
+        .priority-text span {
+            color: #cbd5e1;
+        }
+
+        .limitation-box {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 20px;
+        }
+
+        .limitation-box ul {
+            padding-left: 22px;
+            color: #cbd5e1;
+        }
+
+        .limitation-box li {
+            margin-bottom: 10px;
+        }
+
+        .limitation-box li:last-child {
+            margin-bottom: 0;
+        }
+
+        footer {
+            background: #111827;
+            text-align: center;
+            padding: 25px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 1200px) {
+
+            .project-header,
+            .analysis-section {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 18px 6%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .project-header {
+                padding: 50px 0 30px;
+            }
+
+            .project-header h1 {
+                font-size: 2rem;
+            }
+
+            .analysis-section {
+                padding: 20px 0 60px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .workflow {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <a href="../index.html">
+            <strong>Alden Arce-Romero</strong>
+        </a>
+
+        <a class="back-link" href="../index.html#projects">
+            ← Back to Projects
+        </a>
+
+    </nav>
+
+
+    <section class="project-header">
+
+        <h1>Automatic Course Scheduler</h1>
+
+        <p>
+            Built a Python application that generates semester schedules for
+            University of Maryland Information Science students using degree
+            requirements, prerequisite validation, real-time course data,
+            seat availability, and scheduling logic.
+        </p>
+
+        <p class="project-tools">
+            Python • REST API • Object-Oriented Programming • CSV • JSON • Regular Expressions
+        </p>
+
+        <a class="github-button"
+           href="https://github.com/aarcero/INST326_Final_Project"
+           target="_blank">
+            View Code on GitHub →
+        </a>
+
+    </section>
+
+
+    <section class="analysis-section">
+
+        <h2>Project Overview</h2>
+
+        <p>
+            Planning a semester can require students to compare degree requirements,
+            prerequisites, course sections, available seats, and scheduling information
+            across multiple sources. I developed the Automatic Course Scheduler to
+            assist Information Science students with this process by combining program
+            requirements with current course-section data and automatically generating
+            a potential semester schedule.
+        </p>
+
+        <p>
+            The user enters completed coursework and can provide courses recommended
+            by an academic advisor. The program then evaluates those courses and fills
+            remaining space in the schedule with eligible courses based on academic
+            requirements and course availability.
+        </p>
+
+
+        <h2>How the Scheduler Works</h2>
+
+        <div class="workflow">
+
+            <div class="workflow-step">
+                <strong>1. Student Information</strong>
+                <span>
+                    The student enters their name, semester, and completed courses.
+                </span>
+            </div>
+
+            <div class="workflow-arrow">↓</div>
+
+            <div class="workflow-step">
+                <strong>2. Advisor Recommendations</strong>
+                <span>
+                    The student can enter courses recommended by an academic advisor.
+                </span>
+            </div>
+
+            <div class="workflow-arrow">↓</div>
+
+            <div class="workflow-step">
+                <strong>3. Degree Requirements</strong>
+                <span>
+                    The program reads Information Science requirements, credits,
+                    categories, and prerequisites from a CSV file.
+                </span>
+            </div>
+
+            <div class="workflow-arrow">↓</div>
+
+            <div class="workflow-step">
+                <strong>4. Prerequisite Validation</strong>
+                <span>
+                    Completed coursework is evaluated against the prerequisite
+                    requirements for potential courses.
+                </span>
+            </div>
+
+            <div class="workflow-arrow">↓</div>
+
+            <div class="workflow-step">
+                <strong>5. UMD API</strong>
+                <span>
+                    Current section information is retrieved, including meeting
+                    days, meeting times, section numbers, and available seats.
+                </span>
+            </div>
+
+            <div class="workflow-arrow">↓</div>
+
+            <div class="workflow-step">
+                <strong>6. Course Filtering</strong>
+                <span>
+                    Completed courses, unavailable sections, invalid sections,
+                    and scheduling conflicts are filtered from consideration.
+                </span>
+            </div>
+
+            <div class="workflow-arrow">↓</div>
+
+            <div class="workflow-step">
+                <strong>7. Course Prioritization</strong>
+                <span>
+                    Remaining courses are considered according to their importance
+                    within the Information Science program.
+                </span>
+            </div>
+
+            <div class="workflow-arrow">↓</div>
+
+            <div class="workflow-step">
+                <strong>8. Recommended Schedule</strong>
+                <span>
+                    The program displays the selected courses, sections, meeting
+                    information, credits, and priority levels.
+                </span>
+            </div>
+
+            <div class="workflow-arrow">↓</div>
+
+            <div class="workflow-step">
+                <strong>9. Optional JSON Export</strong>
+                <span>
+                    The student can export the proposed schedule into a structured
+                    JSON file.
+                </span>
+            </div>
+
+        </div>
+
+
+        <h2>Core Features</h2>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <h3>Real-Time Course Data</h3>
+
+                <p>
+                    Connects to the UMD API to retrieve current section information,
+                    including meeting days, meeting times, section numbers, and
+                    open-seat availability.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <h3>Prerequisite Validation</h3>
+
+                <p>
+                    Evaluates completed coursework before recommending courses.
+                    The prerequisite logic supports required course combinations,
+                    alternative prerequisites, and course-level requirements.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <h3>Advisor-Assisted Scheduling</h3>
+
+                <p>
+                    Allows students to enter courses recommended by an advisor
+                    before the program automatically fills remaining space in
+                    the semester schedule.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <h3>Seat Availability</h3>
+
+                <p>
+                    Sections with no available seats are skipped so the scheduler
+                    focuses on sections that currently have open seats.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <h3>Schedule Conflict Checking</h3>
+
+                <p>
+                    Compares selected sections by meeting day and start time to
+                    prevent identified scheduling conflicts from being added to
+                    the same proposed schedule.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <h3>JSON Export</h3>
+
+                <p>
+                    Allows the completed schedule to be exported with student
+                    information, total credits, course IDs, sections, meeting
+                    information, priority levels, and available seats.
+                </p>
+            </div>
+
+        </div>
+
+
+        <h2>Course Prioritization</h2>
+
+        <p>
+            When the student's advisor-recommended courses do not reach the
+            maximum credit limit, the program searches for additional eligible
+            courses. Courses are prioritized according to their role in the
+            Information Science degree requirements.
+        </p>
+
+        <div class="priority-box">
+
+            <div class="priority-row">
+
+                <div class="priority-number">1</div>
+
+                <div class="priority-text">
+                    <strong>Benchmark Courses</strong>
+                    <span>
+                        Considered first because they represent important
+                        progression requirements within the program.
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="priority-row">
+
+                <div class="priority-number">2</div>
+
+                <div class="priority-text">
+                    <strong>Core Courses</strong>
+                    <span>
+                        Required Information Science coursework is considered
+                        after benchmark requirements.
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="priority-row">
+
+                <div class="priority-number">3</div>
+
+                <div class="priority-text">
+                    <strong>Elective Courses</strong>
+                    <span>
+                        Eligible electives can fill remaining space after
+                        higher-priority requirements are considered.
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <h2>Technical Approach</h2>
+
+        <p>
+            The application was built in Python using object-oriented programming.
+            Student and course information is represented through classes, while
+            program requirements are loaded from a CSV file. Regular expressions
+            are used to standardize course codes entered in different formats.
+        </p>
+
+        <p>
+            The program connects to the UMD API using the Requests library and
+            converts the returned section data into course objects that can be
+            evaluated by the scheduling logic. Meeting times are converted into
+            numeric values for comparison, while prerequisite and priority logic
+            determines which courses are eligible for consideration.
+        </p>
+
+        <p>
+            After advisor-recommended courses are processed, the program can
+            automatically select additional eligible courses until the schedule
+            reaches its credit limit. Courses within the same priority level are
+            randomized so the program does not always recommend the same elective
+            options.
+        </p>
+
+
+        <h2>Current Limitations</h2>
+
+        <div class="limitation-box">
+
+            <ul>
+                <li>
+                    The scheduler is currently designed specifically for the
+                    University of Maryland Information Science program.
+                </li>
+
+                <li>
+                    Program requirements are stored in a local CSV file rather
+                    than retrieved dynamically from the university.
+                </li>
+
+                <li>
+                    The scheduler uses the first valid available section it finds
+                    rather than comparing every possible section to determine an
+                    optimal schedule.
+                </li>
+
+                <li>
+                    Current conflict checking compares meeting days and course
+                    start times and does not yet perform full time-range
+                    optimization.
+                </li>
+
+                <li>
+                    The scheduler primarily focuses on Information Science
+                    coursework and does not currently account for every outside
+                    elective a student may need.
+                </li>
+
+                <li>
+                    The application depends on the availability and accuracy of
+                    the UMD API.
+                </li>
+
+                <li>
+                    The current command-line version does not allow students to
+                    browse and select preferred elective courses before the
+                    automatic schedule is generated.
+                </li>
+            </ul>
+
+        </div>
+
+
+        <h2>Future Improvements</h2>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <h3>Schedule Optimization</h3>
+
+                <p>
+                    Compare multiple valid schedules and prioritize options based
+                    on factors such as time spacing and student preferences.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <h3>Web Interface</h3>
+
+                <p>
+                    Develop a graphical interface that allows students to enter
+                    their information and explore generated schedules without
+                    using the command line.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <h3>Multi-Semester Planning</h3>
+
+                <p>
+                    Expand the scheduler beyond a single semester so students
+                    can plan a longer academic pathway toward graduation.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <h3>Additional Degree Programs</h3>
+
+                <p>
+                    Expand the scheduling logic so degree requirements from
+                    programs beyond Information Science can be supported.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <h3>Course Exploration</h3>
+
+                <p>
+                    Allow students to review course descriptions and select
+                    preferred electives before the final schedule is generated.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <h3>Professor Information</h3>
+
+                <p>
+                    Explore integration with sources such as PlanetTerp so
+                    professor information can become another factor in future
+                    schedule recommendations.
+                </p>
+            </div>
+
+        </div>
+
+
+        <h2>Project Goal</h2>
+
+        <p>
+            The goal of this project was to reduce the amount of manual work
+            involved in semester planning while applying programming concepts
+            to a problem that students regularly encounter. Building the
+            scheduler allowed me to combine API data, object-oriented programming,
+            data processing, and decision-making logic into a practical
+            application.
+        </p>
+
+    </section>
+
+
+    <footer>
+        © 2026 Alden Arce-Romero
+    </footer>
+
+</body>
+
+</html>
