@@ -38,42 +38,61 @@
             color: #cbd5e1;
         }
 
+
+        /* HEADER */
+
         .project-header {
-            padding: 70px 0 40px;
-            max-width: 1100px;
+            max-width: 850px;
             margin: auto;
+            padding: 70px 0 40px;
         }
 
         .project-header h1 {
-            font-size: 2.7rem;
+            font-size: 2.5rem;
             margin-bottom: 15px;
         }
 
         .project-header p {
-            max-width: 850px;
             color: #cbd5e1;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
         }
 
         .project-tools {
-            margin-top: 20px;
-            color: #94a3b8;
+            margin-top: 18px;
+            color: #94a3b8 !important;
         }
 
-        .workbook-section {
-            width: 100%;
-            max-width: 1100px;
+
+        /* MAIN CONTENT */
+
+        .project-content {
+            max-width: 850px;
             margin: auto;
-            padding: 20px 0 70px;
+            padding: 20px 0 80px;
+        }
+
+
+        /* INTERACTIVE WORKBOOK */
+
+        .workbook-section {
+            width: 1100px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 45px;
+        }
+
+        .workbook-section h2 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
         }
 
         .excel-container {
             width: 100%;
             height: 650px;
-            margin: auto;
             background: white;
             border-radius: 12px;
             overflow: hidden;
+            border: 1px solid #334155;
         }
 
         .excel-container iframe {
@@ -83,21 +102,72 @@
             display: block;
         }
 
-        .analysis-section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 20px 0 80px;
+
+        /* PROJECT INFORMATION */
+
+        .project-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 35px;
         }
 
-        .analysis-section h2 {
-            margin-top: 40px;
-            margin-bottom: 12px;
-            font-size: 1.7rem;
+        .project-card h2 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
         }
 
-        .analysis-section p {
+        .project-card p {
             color: #cbd5e1;
+            margin-bottom: 28px;
         }
+
+        .project-card p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* KEY FINDINGS */
+
+        .section-title {
+            margin-bottom: 18px;
+            font-size: 1.5rem;
+        }
+
+        .findings-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-bottom: 35px;
+        }
+
+        .finding-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 22px;
+        }
+
+        .finding-card h3 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .finding-card p {
+            color: #cbd5e1;
+            margin: 0;
+        }
+
+        .finding-label {
+            color: #93c5fd;
+            font-size: 1.05rem;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+
+        /* FOOTER */
 
         footer {
             background: #111827;
@@ -106,16 +176,27 @@
             color: #94a3b8;
         }
 
+
+        /* TABLET */
+
         @media (max-width: 1200px) {
 
             .project-header,
-            .workbook-section,
-            .analysis-section {
+            .project-content {
                 width: 90%;
+            }
+
+            .workbook-section {
+                width: 100%;
+                margin-left: 0;
+                transform: none;
             }
         }
 
-        @media (max-width: 768px) {
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
 
             nav {
                 padding: 18px 6%;
@@ -132,22 +213,21 @@
                 font-size: 2rem;
             }
 
-            .workbook-section {
-                padding: 20px 0 50px;
+            .findings-grid {
+                grid-template-columns: 1fr;
             }
 
             .excel-container {
                 height: 500px;
             }
-
-            .analysis-section {
-                padding: 20px 0 60px;
-            }
         }
+
     </style>
+
 </head>
 
 <body>
+
 
     <nav>
 
@@ -172,93 +252,228 @@
         </p>
 
         <p class="project-tools">
-            Excel • Data Analysis • Data Visualization • Pivot Tables • Formulas
+            Excel • Data Analysis • Data Visualization • PivotTables • Formulas • A/B Testing
         </p>
 
     </section>
 
 
-    <section class="workbook-section">
-
-        <div class="excel-container">
-
-            <iframe
-                src="https://1drv.ms/x/c/edb53092e691307b/IQQGtjZ8j63_SJ-uhtOznOYnAb6KhNKbZME_ybtEtTAa2XM"
-                frameborder="0"
-                scrolling="no">
-            </iframe>
-
-        </div>
-
-    </section>
+    <main class="project-content">
 
 
-    <section class="analysis-section">
+        <!-- INTERACTIVE WORKBOOK -->
 
-        <h2>Project Overview</h2>
+        <section class="workbook-section">
 
-        <p>
-            This project analyzed website performance for Grammy.com and
-            RecordingAcademy.com to evaluate user engagement and determine whether
-            separating the two websites improved the user experience. Using Excel,
-            I analyzed website traffic, pages per session, bounce rate, average time
-            on site, mobile usage, and A/B testing results to identify changes in
-            visitor behavior and develop a business recommendation.
-        </p>
+            <h2>Interactive Workbook</h2>
 
+            <div class="excel-container">
 
-        <h2>Key Findings</h2>
+                <iframe
+                    src="https://1drv.ms/x/c/edb53092e691307b/IQQGtjZ8j63_SJ-uhtOznOYnAb6KhNKbZME_ybtEtTAa2XM"
+                    frameborder="0"
+                    scrolling="no">
+                </iframe>
 
-        <p>
-            The Recording Academy website showed the strongest overall engagement,
-            with 2.78 pages per session, a 33.7% bounce rate, and an average time on
-            site of 128.50 seconds. After the website split, Grammy.com increased
-            from 1.86 to 2.25 pages per session and its bounce rate improved from
-            41.6% to 40.2%, although average time on site decreased from 102.85 to
-            82.99 seconds.
-        </p>
+            </div>
 
-        <p>
-            Mobile visitors represented 73.7% of total website traffic, making
-            mobile usability an important factor in the overall user experience.
-            Traffic analysis also showed major increases surrounding Grammy-related
-            events, including approximately 1,389,590 visitors on a Grammy Awards
-            live-event day compared with roughly 32,388 visitors on a typical day.
-        </p>
-
-        <p>
-            A separate A/B test found that the test group produced 158 CTA clicks
-            from 4,099 visitors compared with 119 clicks from 3,797 visitors in the
-            control group. The test version achieved approximately a 3.85%
-            conversion rate compared with 3.13% for the control, and the difference
-            was statistically significant.
-        </p>
+        </section>
 
 
-        <h2>Recommendation</h2>
+        <!-- PROJECT OVERVIEW -->
 
-        <p>
-            Based on the analysis, I recommended maintaining the separate Grammy
-            and Recording Academy websites while continuing to improve the mobile
-            experience. The website split showed improvements in important
-            engagement metrics while allowing each site to maintain a more focused
-            purpose for its audience.
-        </p>
+        <section class="project-card">
 
-        <p>
-            I also recommended increasing awareness of Recording Academy programs
-            and services throughout the year rather than relying primarily on
-            Grammy-related events. One approach would be to highlight Recording
-            Academy initiatives alongside Grammy content on the homepage, allowing
-            the Grammy Awards to attract visitors while exposing those users to
-            additional Recording Academy content.
-        </p>
+            <h2>Project Overview</h2>
 
-    </section>
+            <p>
+                This project analyzed website performance for Grammy.com and
+                RecordingAcademy.com to evaluate user engagement and determine
+                whether separating the two websites improved the user experience.
+                Using Excel, I analyzed website traffic, pages per session, bounce
+                rate, average time on site, mobile usage, and A/B testing results
+                to identify changes in visitor behavior and develop a business
+                recommendation.
+            </p>
+
+
+            <h2>Website Performance Analysis</h2>
+
+            <p>
+                I compared engagement metrics across Grammy.com and
+                RecordingAcademy.com to understand how visitors interacted with
+                each website. The analysis included pages per session, bounce
+                rate, average time on site, traffic patterns, and mobile usage.
+            </p>
+
+
+            <h2>Experiment Analysis</h2>
+
+            <p>
+                I also evaluated the results of an A/B test by comparing visitor
+                and CTA click data between the control and test groups. The
+                experiment was used to determine whether the test version
+                produced a statistically significant improvement.
+            </p>
+
+        </section>
+
+
+        <!-- KEY FINDINGS -->
+
+        <h2 class="section-title">Key Findings</h2>
+
+        <section class="findings-grid">
+
+
+            <div class="finding-card">
+
+                <div class="finding-label">
+                    2.78 Pages
+                </div>
+
+                <h3>Recording Academy Engagement</h3>
+
+                <p>
+                    RecordingAcademy.com averaged 2.78 pages per session with a
+                    33.7% bounce rate and 128.50 seconds average time on site.
+                </p>
+
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="finding-label">
+                    2.25 Pages
+                </div>
+
+                <h3>Grammy.com After Split</h3>
+
+                <p>
+                    Grammy.com increased from 1.86 to 2.25 pages per session
+                    after the websites were separated.
+                </p>
+
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="finding-label">
+                    73.7%
+                </div>
+
+                <h3>Mobile Traffic</h3>
+
+                <p>
+                    Mobile visitors represented 73.7% of total website traffic,
+                    making mobile usability an important part of the overall
+                    user experience.
+                </p>
+
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="finding-label">
+                    ~1.39M Visitors
+                </div>
+
+                <h3>Grammy Event Traffic</h3>
+
+                <p>
+                    A Grammy Awards live-event day generated approximately
+                    1,389,590 visitors compared with roughly 32,388 visitors
+                    on a typical day.
+                </p>
+
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="finding-label">
+                    3.85%
+                </div>
+
+                <h3>Test Conversion Rate</h3>
+
+                <p>
+                    The test group generated 158 CTA clicks from 4,099 visitors,
+                    producing approximately a 3.85% conversion rate.
+                </p>
+
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="finding-label">
+                    3.13%
+                </div>
+
+                <h3>Control Conversion Rate</h3>
+
+                <p>
+                    The control group generated 119 CTA clicks from 3,797
+                    visitors, producing approximately a 3.13% conversion rate.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- RECOMMENDATIONS -->
+
+        <section class="project-card">
+
+            <h2>Recommendations</h2>
+
+            <p>
+                Based on the analysis, I recommended maintaining the separate
+                Grammy and Recording Academy websites while continuing to
+                improve the mobile experience. The website split showed
+                improvements in important engagement metrics while allowing
+                each site to maintain a more focused purpose for its audience.
+            </p>
+
+            <p>
+                I also recommended increasing awareness of Recording Academy
+                programs and services throughout the year rather than relying
+                primarily on Grammy-related events.
+            </p>
+
+            <p>
+                One approach would be to highlight Recording Academy initiatives
+                alongside Grammy content on the homepage, allowing the Grammy
+                Awards to attract visitors while exposing those users to
+                additional Recording Academy content.
+            </p>
+
+
+            <h2>Skills Applied</h2>
+
+            <p>
+                Excel, PivotTables, formulas, data analysis, data visualization,
+                website performance analysis, A/B testing, statistical analysis,
+                user behavior analysis, and translating findings into business
+                recommendations.
+            </p>
+
+        </section>
+
+
+    </main>
+
 
     <footer>
         © 2026 Alden Arce-Romero
     </footer>
+
 
 </body>
 
