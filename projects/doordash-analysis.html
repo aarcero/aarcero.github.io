@@ -39,41 +39,70 @@
         }
 
         .project-header {
-            padding: 70px 0 40px;
-            max-width: 1100px;
+            max-width: 850px;
             margin: auto;
+            padding: 70px 0 40px;
         }
 
         .project-header h1 {
-            font-size: 2.7rem;
+            font-size: 2.5rem;
             margin-bottom: 15px;
         }
 
         .project-header p {
-            max-width: 850px;
             color: #cbd5e1;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
         }
 
         .project-tools {
-            margin-top: 20px;
-            color: #94a3b8;
+            margin-top: 18px;
+            color: #94a3b8 !important;
+        }
+
+        .project-content {
+            max-width: 850px;
+            margin: auto;
+            padding: 20px 0 80px;
+        }
+
+        .project-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 35px;
+        }
+
+        .project-card h2 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .project-card p {
+            color: #cbd5e1;
+            margin-bottom: 28px;
+        }
+
+        .project-card p:last-child {
+            margin-bottom: 0;
         }
 
         .workbook-section {
-            width: 100%;
-            max-width: 1100px;
-            margin: auto;
-            padding: 20px 0 70px;
+            margin-bottom: 35px;
+        }
+
+        .workbook-section h2 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
         }
 
         .excel-container {
             width: 100%;
-            height: 650px;
-            margin: auto;
+            height: 600px;
             background: white;
             border-radius: 12px;
             overflow: hidden;
+            border: 1px solid #334155;
         }
 
         .excel-container iframe {
@@ -83,21 +112,36 @@
             display: block;
         }
 
-        .analysis-section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 20px 0 80px;
+        .findings-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 20px;
+            margin-bottom: 35px;
         }
 
-        .analysis-section h2 {
-            margin-top: 40px;
-            margin-bottom: 12px;
-            font-size: 1.7rem;
+        .finding-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 22px;
         }
 
-        .analysis-section p {
+        .finding-card h3 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .finding-card p {
             color: #cbd5e1;
-            margin-bottom: 18px;
+            margin: 0;
+        }
+
+        .finding-label {
+            color: #93c5fd;
+            font-size: 1.05rem;
+            font-weight: bold;
+            margin-bottom: 7px;
         }
 
         footer {
@@ -107,16 +151,15 @@
             color: #94a3b8;
         }
 
-        @media (max-width: 1200px) {
+        @media (max-width: 950px) {
 
             .project-header,
-            .workbook-section,
-            .analysis-section {
+            .project-content {
                 width: 90%;
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 700px) {
 
             nav {
                 padding: 18px 6%;
@@ -133,19 +176,16 @@
                 font-size: 2rem;
             }
 
-            .workbook-section {
-                padding: 20px 0 50px;
+            .findings-grid {
+                grid-template-columns: 1fr;
             }
 
             .excel-container {
                 height: 500px;
             }
-
-            .analysis-section {
-                padding: 20px 0 60px;
-            }
         }
     </style>
+
 </head>
 
 <body>
@@ -180,77 +220,189 @@
     </section>
 
 
-    <section class="workbook-section">
+    <main class="project-content">
 
-        <div class="excel-container">
+        <div class="workbook-section">
 
-            <iframe
-                src="https://1drv.ms/x/c/edb53092e691307b/IQSVxDS-W0SHT7xHNz4HRbwWAeC5FgN_lChbu9BxZsXPOvg"
-                frameborder="0"
-                scrolling="no">
-            </iframe>
+            <h2>Interactive Workbook</h2>
+
+            <div class="excel-container">
+
+                <iframe
+                    src="https://1drv.ms/x/c/edb53092e691307b/IQSVxDS-W0SHT7xHNz4HRbwWAeC5FgN_lChbu9BxZsXPOvg"
+                    frameborder="0"
+                    scrolling="no">
+                </iframe>
+
+            </div>
 
         </div>
 
-    </section>
+
+        <div class="project-card">
+
+            <h2>Project Overview</h2>
+
+            <p>
+                This project analyzed DoorDash delivery data across Boston,
+                Chicago, Los Angeles, New York City, San Francisco, and Seattle.
+                Using Excel, I compared order volume, delivery times, order
+                prices, and cuisine preferences to identify differences in
+                market performance and develop recommendations for improving
+                operations and customer demand.
+            </p>
 
 
-    <section class="analysis-section">
+            <h2>Market Analysis</h2>
 
-        <h2>Project Overview</h2>
+            <p>
+                I compared delivery performance and customer activity across
+                six major U.S. markets. This made it possible to identify
+                differences in delivery times, order volume, average order
+                prices, and cuisine preferences between individual markets.
+            </p>
 
-        <p>
-            This project analyzed DoorDash delivery data across Boston, Chicago,
-            Los Angeles, New York City, San Francisco, and Seattle. Using Excel,
-            I compared order volume, delivery times, order prices, and cuisine
-            preferences to identify differences in market performance and develop
-            recommendations for improving operations and customer demand.
-        </p>
+
+            <h2>Business Focus</h2>
+
+            <p>
+                The analysis focused on translating market differences into
+                potential business actions. Instead of treating every market
+                the same, the findings were used to develop recommendations
+                based on the specific performance and customer demand observed
+                within each location.
+            </p>
+
+        </div>
 
 
         <h2>Key Findings</h2>
 
-        <p>
-            Across 50,036 orders, the average delivery time was approximately
-            49.9 minutes. Delivery performance varied across markets, with Boston
-            and New York City averaging approximately 48 minutes while San
-            Francisco had the longest average delivery time at approximately
-            55 minutes.
-        </p>
+        <div class="findings-grid">
 
-        <p>
-            New York City had the highest order volume with 14,343 orders,
-            followed by Chicago with 11,785 and San Francisco with 9,310.
-            Seattle had the lowest order volume among the markets analyzed with
-            3,945 orders. Chicago also had the highest average order price.
-        </p>
+            <div class="finding-card">
 
-        <p>
-            Cuisine analysis showed differences in customer preferences across
-            markets. American cuisine was the most popular overall, while Seattle
-            had the highest percentage of sandwich-shop orders. These differences
-            demonstrate how customer demand can vary between individual markets.
-        </p>
+                <div class="finding-label">50,036 Orders</div>
+
+                <h3>Overall Delivery Time</h3>
+
+                <p>
+                    The average delivery time across the dataset was
+                    approximately 49.9 minutes.
+                </p>
+
+            </div>
 
 
-        <h2>Recommendations</h2>
+            <div class="finding-card">
 
-        <p>
-            Based on the analysis, I recommended using driver incentives in
-            San Francisco to help address its longer average delivery times.
-            Increasing driver availability during periods of high demand could
-            help reduce delivery times and improve customer experience.
-        </p>
+                <div class="finding-label">San Francisco</div>
 
-        <p>
-            I also recommended using consumer incentives in Seattle to encourage
-            additional orders because it had the lowest order volume among the
-            markets analyzed. Promotions could focus on popular cuisine categories,
-            including pizza and Mexican food, while market-specific preferences
-            could be used to further tailor promotional strategies.
-        </p>
+                <h3>Longest Delivery Time</h3>
 
-    </section>
+                <p>
+                    San Francisco averaged approximately 55 minutes, compared
+                    with approximately 48 minutes in Boston and New York City.
+                </p>
+
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="finding-label">14,343 Orders</div>
+
+                <h3>New York City</h3>
+
+                <p>
+                    New York City had the highest order volume, followed by
+                    Chicago with 11,785 orders and San Francisco with 9,310.
+                </p>
+
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="finding-label">3,945 Orders</div>
+
+                <h3>Seattle</h3>
+
+                <p>
+                    Seattle had the lowest order volume among the markets
+                    analyzed.
+                </p>
+
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="finding-label">Chicago</div>
+
+                <h3>Average Order Price</h3>
+
+                <p>
+                    Chicago had the highest average order price among the
+                    markets included in the analysis.
+                </p>
+
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="finding-label">Cuisine Preferences</div>
+
+                <h3>Customer Demand</h3>
+
+                <p>
+                    American cuisine was the most popular overall, while
+                    Seattle had the highest percentage of sandwich-shop orders.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h2>Recommendations</h2>
+
+            <p>
+                Based on the analysis, I recommended using driver incentives in
+                San Francisco to help address its longer average delivery
+                times. Increasing driver availability during periods of high
+                demand could help reduce delivery times and improve customer
+                experience.
+            </p>
+
+            <p>
+                I also recommended using consumer incentives in Seattle to
+                encourage additional orders because it had the lowest order
+                volume among the markets analyzed.
+            </p>
+
+            <p>
+                Promotions could focus on popular cuisine categories, including
+                pizza and Mexican food, while market-specific preferences could
+                be used to further tailor promotional strategies.
+            </p>
+
+
+            <h2>Skills Applied</h2>
+
+            <p>
+                Excel, PivotTables, data analysis, data visualization,
+                comparative market analysis, customer demand analysis,
+                operational analysis, and translating findings into business
+                recommendations.
+            </p>
+
+        </div>
+
+    </main>
 
 
     <footer>
