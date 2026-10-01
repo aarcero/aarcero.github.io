@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BART Ridership Analysis | Alden Arce-Romero</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: #111827;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: #cbd5e1;
+        }
+
+        .project-header {
+            max-width: 850px;
+            margin: auto;
+            padding: 70px 0 40px;
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .project-header p {
+            color: #cbd5e1;
+            font-size: 1.05rem;
+        }
+
+        .project-tools {
+            margin-top: 18px;
+            color: #94a3b8 !important;
+        }
+
+        .project-content {
+            max-width: 850px;
+            margin: auto;
+            padding: 20px 0 80px;
+        }
+
+        .project-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 35px;
+        }
+
+        .project-card h2 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .project-card p {
+            color: #cbd5e1;
+            margin-bottom: 28px;
+        }
+
+        .project-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .findings-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 20px;
+            margin-bottom: 35px;
+        }
+
+        .finding-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 22px;
+        }
+
+        .finding-card h3 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .finding-card p {
+            color: #cbd5e1;
+            margin: 0;
+        }
+
+        .metric {
+            color: #93c5fd;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .project-files {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 35px;
+        }
+
+        .project-files h2 {
+            margin-bottom: 10px;
+        }
+
+        .project-files p {
+            color: #cbd5e1;
+            margin: 0;
+        }
+
+        footer {
+            background: #111827;
+            text-align: center;
+            padding: 25px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 950px) {
+
+            .project-header,
+            .project-content {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 18px 6%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .project-header {
+                padding: 50px 0 30px;
+            }
+
+            .project-header h1 {
+                font-size: 2rem;
+            }
+
+            .findings-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <a href="../index.html">
+            <strong>Alden Arce-Romero</strong>
+        </a>
+
+        <a class="back-link" href="../projects.html">
+            ← Back to Other Projects
+        </a>
+
+    </nav>
+
+
+    <section class="project-header">
+
+        <h1>BART Ridership Analysis</h1>
+
+        <p>
+            Analyzed BART ridership data to compare weekday and weekend travel
+            patterns, evaluate Yellow Line usage, and determine how much of the
+            system's ridership came from downtown stations.
+        </p>
+
+        <p class="project-tools">
+            Excel • PivotTables • Data Analysis
+        </p>
+
+    </section>
+
+
+    <main class="project-content">
+
+        <div class="project-card">
+
+            <h2>Project Overview</h2>
+
+            <p>
+                This project analyzed Bay Area Rapid Transit ridership records
+                to better understand how passengers use the transit system.
+                The analysis focused on differences between weekday and weekend
+                travel, Yellow Line ridership, and the percentage of total
+                ridership associated with downtown stations.
+            </p>
+
+
+            <h2>Data Preparation</h2>
+
+            <p>
+                I used Excel to organize and prepare the ridership data for
+                analysis. The project included creating additional variables
+                from the original data using functions such as MONTH, WEEKDAY,
+                LEFT, and IF. These variables made it possible to classify
+                records and compare different types of ridership activity.
+            </p>
+
+
+            <h2>Analysis</h2>
+
+            <p>
+                I compared weekday and weekend ridership to determine how
+                passenger demand changed depending on the day of the week.
+                The analysis showed stronger weekday activity, indicating the
+                importance of commuter travel within the BART system.
+            </p>
+
+            <p>
+                I also analyzed Yellow Line usage to understand the amount of
+                ridership associated with one of BART's major routes. This
+                analysis identified high-volume Yellow Line usage as an
+                important part of overall passenger activity.
+            </p>
+
+            <p>
+                Finally, I evaluated downtown ridership to determine whether
+                most passengers were concentrated in downtown stations or
+                distributed throughout the larger BART network.
+            </p>
+
+        </div>
+
+
+        <h2>Key Findings</h2>
+
+        <div class="findings-grid">
+
+            <div class="finding-card">
+                <h3>Weekday Travel</h3>
+
+                <p>
+                    Ridership was higher during weekdays than weekends,
+                    demonstrating the importance of weekday commuter demand
+                    within the BART system.
+                </p>
+            </div>
+
+
+            <div class="finding-card">
+                <h3>Yellow Line</h3>
+
+                <p>
+                    The analysis identified high-volume Yellow Line usage,
+                    making the route an important area to consider when
+                    evaluating passenger demand.
+                </p>
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="metric">6,932,181</div>
+
+                <h3>Downtown Ridership</h3>
+
+                <p>
+                    Downtown stations accounted for more than 6.9 million
+                    passengers in the analyzed ridership data.
+                </p>
+
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="metric">28.2%</div>
+
+                <h3>Share of Total Ridership</h3>
+
+                <p>
+                    Downtown stations represented approximately 28.2% of total
+                    ridership, meaning roughly 71.8% of ridership occurred
+                    outside the downtown stations.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h2>Recommendation</h2>
+
+            <p>
+                The ridership patterns show that service planning should account
+                for strong weekday commuter demand and high-volume routes such
+                as the Yellow Line. These areas represent important opportunities
+                for service optimization and infrastructure planning.
+            </p>
+
+            <p>
+                The downtown analysis also shows that most ridership occurred
+                outside downtown stations. Because downtown stations represented
+                only 28.2% of total ridership, planning decisions should consider
+                passenger demand across the broader BART network rather than
+                concentrating resources only on downtown locations.
+            </p>
+
+
+            <h2>Skills Applied</h2>
+
+            <p>
+                Excel, PivotTables, data preparation, Excel formulas, ridership
+                analysis, comparative analysis, and translating transportation
+                data into operational recommendations.
+            </p>
+
+        </div>
+
+
+        <div class="project-files">
+
+            <h2>Project Screenshots</h2>
+
+            <p>
+                The screenshots shown in this section will provide an overview
+                of the work completed for this project. If you are interested
+                in reviewing the complete project file or discussing the
+                analysis in greater detail, please contact me and I would be
+                happy to provide access.
+            </p>
+
+            <!-- BART PROJECT SCREENSHOTS WILL BE ADDED HERE LATER -->
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        © 2026 Alden Arce-Romero
+    </footer>
+
+</body>
+
+</html>
