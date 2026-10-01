@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>H&M Email A/B Test | Alden Arce-Romero</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: #111827;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: #cbd5e1;
+        }
+
+        .project-header {
+            max-width: 850px;
+            margin: auto;
+            padding: 70px 0 40px;
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .project-header p {
+            color: #cbd5e1;
+            font-size: 1.05rem;
+        }
+
+        .project-tools {
+            margin-top: 18px;
+            color: #94a3b8 !important;
+        }
+
+        .project-content {
+            max-width: 850px;
+            margin: auto;
+            padding: 20px 0 80px;
+        }
+
+        .project-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 35px;
+        }
+
+        .project-card h2 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .project-card p {
+            color: #cbd5e1;
+            margin-bottom: 28px;
+        }
+
+        .project-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .findings-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 20px;
+            margin-bottom: 35px;
+        }
+
+        .finding-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 22px;
+        }
+
+        .finding-card h3 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .finding-card p {
+            color: #cbd5e1;
+            margin: 0;
+        }
+
+        .metric {
+            color: #93c5fd;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .subject-box {
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 18px;
+        }
+
+        .subject-box strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #f8fafc;
+        }
+
+        .subject-box span {
+            color: #cbd5e1;
+        }
+
+        .project-files {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 35px;
+        }
+
+        .project-files h2 {
+            margin-bottom: 10px;
+        }
+
+        .project-files p {
+            color: #cbd5e1;
+            margin: 0;
+        }
+
+        footer {
+            background: #111827;
+            text-align: center;
+            padding: 25px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 950px) {
+
+            .project-header,
+            .project-content {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 18px 6%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .project-header {
+                padding: 50px 0 30px;
+            }
+
+            .project-header h1 {
+                font-size: 2rem;
+            }
+
+            .findings-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <a href="../index.html">
+            <strong>Alden Arce-Romero</strong>
+        </a>
+
+        <a class="back-link" href="../projects.html">
+            ← Back to Other Projects
+        </a>
+
+    </nav>
+
+
+    <section class="project-header">
+
+        <h1>H&M Email A/B Test</h1>
+
+        <p>
+            Analyzed an H&M promotional email A/B test to determine whether
+            changing the email subject line could improve customer open rates
+            during a seasonal marketing campaign.
+        </p>
+
+        <p class="project-tools">
+            Excel • A/B Testing • Statistical Analysis
+        </p>
+
+    </section>
+
+
+    <main class="project-content">
+
+        <div class="project-card">
+
+            <h2>Project Overview</h2>
+
+            <p>
+                This project evaluated the performance of two promotional email
+                subject lines for H&M. The goal was to determine whether changing
+                the wording of the subject line could produce a meaningful
+                improvement in customer engagement as measured by email open rate.
+            </p>
+
+
+            <h2>Experiment Design</h2>
+
+            <p>
+                The A/B test changed only the email subject line so that the
+                effect of the new wording could be compared with the existing
+                version.
+            </p>
+
+
+            <div class="subject-box">
+                <strong>Control Subject Line</strong>
+                <span>20% off + free shipping</span>
+            </div>
+
+
+            <div class="subject-box">
+                <strong>Test Subject Line</strong>
+                <span>Your last chance to score 20% off + free shipping.</span>
+            </div>
+
+
+            <h2>Success Metric</h2>
+
+            <p>
+                Email open rate was used as the primary metric for evaluating
+                the experiment. H&M's historical promotional email open rate
+                was 18%, while the target open rate for the campaign was 20%.
+            </p>
+
+
+            <h2>Minimum Detectable Effect</h2>
+
+            <p>
+                Moving from an 18% historical open rate to a 20% target represents
+                an absolute improvement of 2 percentage points. Relative to the
+                original 18% rate, this corresponds to a minimum detectable effect
+                of approximately 11.1%.
+            </p>
+
+
+            <h2>Analysis</h2>
+
+            <p>
+                I used Excel and statistical analysis to compare the performance
+                of the control and test groups. The analysis focused on whether
+                the observed difference in open rates was large enough to provide
+                statistical evidence that the test subject line performed
+                differently from the control.
+            </p>
+
+        </div>
+
+
+        <h2>Key Findings</h2>
+
+        <div class="findings-grid">
+
+            <div class="finding-card">
+
+                <div class="metric">18%</div>
+
+                <h3>Historical Open Rate</h3>
+
+                <p>
+                    H&M's historical promotional email open rate provided the
+                    baseline used to evaluate the campaign.
+                </p>
+
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="metric">20%</div>
+
+                <h3>Target Open Rate</h3>
+
+                <p>
+                    The campaign targeted a two-percentage-point improvement
+                    over the historical open rate.
+                </p>
+
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="metric">11.1%</div>
+
+                <h3>Relative MDE</h3>
+
+                <p>
+                    The difference between the historical and target open rates
+                    represented an approximately 11.1% relative minimum
+                    detectable effect.
+                </p>
+
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="metric">+1.58 pp</div>
+
+                <h3>Observed Lift</h3>
+
+                <p>
+                    The test subject line produced an open-rate lift of
+                    approximately 1.58 percentage points compared with the
+                    control group.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h2>Statistical Conclusion</h2>
+
+            <p>
+                The A/B test provided statistically significant evidence of an
+                improvement in email open rate. Based on the experiment, the
+                test subject line performed better than the control subject line
+                on the campaign's primary engagement metric.
+            </p>
+
+
+            <h2>Recommendation</h2>
+
+            <p>
+                Based on the observed improvement and statistical results, the
+                new subject line should continue to be used and monitored in
+                future promotional email campaigns.
+            </p>
+
+            <p>
+                Future testing should also evaluate whether higher open rates
+                translate into stronger downstream customer behavior, including
+                click-through rates, conversions, revenue, and other measures
+                of campaign performance.
+            </p>
+
+
+            <h2>Skills Applied</h2>
+
+            <p>
+                Excel, A/B testing, statistical analysis, hypothesis testing,
+                minimum detectable effect calculations, experiment evaluation,
+                and translating statistical results into business recommendations.
+            </p>
+
+        </div>
+
+
+        <div class="project-files">
+
+            <h2>Project Screenshots</h2>
+
+            <p>
+                The screenshots shown in this section will provide an overview
+                of the work completed for this project. If you are interested
+                in reviewing the complete project file or discussing the
+                analysis in greater detail, please contact me and I would be
+                happy to provide access.
+            </p>
+
+            <!-- H&M PROJECT SCREENSHOTS WILL BE ADDED HERE LATER -->
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        © 2026 Alden Arce-Romero
+    </footer>
+
+</body>
+
+</html>
