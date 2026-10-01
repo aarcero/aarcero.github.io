@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Terracotta Analysis | Alden Arce-Romero</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: #111827;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: #cbd5e1;
+        }
+
+        .project-header {
+            max-width: 850px;
+            margin: auto;
+            padding: 70px 0 40px;
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .project-header p {
+            color: #cbd5e1;
+            font-size: 1.05rem;
+        }
+
+        .project-tools {
+            margin-top: 18px;
+            color: #94a3b8 !important;
+        }
+
+        .project-content {
+            max-width: 850px;
+            margin: auto;
+            padding: 20px 0 80px;
+        }
+
+        .project-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 35px;
+        }
+
+        .project-card h2 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .project-card p {
+            color: #cbd5e1;
+            margin-bottom: 28px;
+        }
+
+        .project-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 20px;
+            margin-bottom: 35px;
+        }
+
+        .analysis-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 22px;
+        }
+
+        .analysis-card h3 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .analysis-card p {
+            color: #cbd5e1;
+            margin: 0;
+        }
+
+        .analysis-label {
+            color: #93c5fd;
+            font-size: 1.05rem;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        .project-files {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 35px;
+        }
+
+        .project-files h2 {
+            margin-bottom: 10px;
+        }
+
+        .project-files p {
+            color: #cbd5e1;
+            margin: 0;
+        }
+
+        footer {
+            background: #111827;
+            text-align: center;
+            padding: 25px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 950px) {
+
+            .project-header,
+            .project-content {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 18px 6%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .project-header {
+                padding: 50px 0 30px;
+            }
+
+            .project-header h1 {
+                font-size: 2rem;
+            }
+
+            .analysis-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <a href="../index.html">
+            <strong>Alden Arce-Romero</strong>
+        </a>
+
+        <a class="back-link" href="../projects.html">
+            ← Back to Other Projects
+        </a>
+
+    </nav>
+
+
+    <section class="project-header">
+
+        <h1>Terracotta Analysis</h1>
+
+        <p>
+            Analyzed customer survey data in Excel using XLOOKUP and
+            PivotTables to identify top products, key purchase factors,
+            and opportunities to increase online sales.
+        </p>
+
+        <p class="project-tools">
+            Excel • PivotTables • XLOOKUP • Data Analysis
+        </p>
+
+    </section>
+
+
+    <main class="project-content">
+
+        <div class="project-card">
+
+            <h2>Project Overview</h2>
+
+            <p>
+                This project focused on analyzing customer survey data for
+                Terracotta. The goal was to organize customer responses and
+                turn the survey data into information that could help explain
+                customer preferences and support online sales strategies.
+            </p>
+
+
+            <h2>Data Preparation</h2>
+
+            <p>
+                I used Excel to organize the survey information and XLOOKUP
+                to connect information needed for the analysis. This helped
+                prepare the customer data for comparison and summarization.
+            </p>
+
+
+            <h2>PivotTable Analysis</h2>
+
+            <p>
+                PivotTables were used to summarize the survey responses and
+                compare categories within the dataset. Instead of reviewing
+                individual survey responses, the PivotTables made it possible
+                to identify broader patterns across customers.
+            </p>
+
+
+            <h2>Customer Preferences</h2>
+
+            <p>
+                I analyzed the survey results to identify which products
+                performed strongest among customers and determine the factors
+                that influenced purchasing decisions.
+            </p>
+
+
+            <h2>Online Sales Opportunities</h2>
+
+            <p>
+                The results were then used to identify opportunities for
+                improving online sales. Connecting customer preferences and
+                purchase factors to potential business actions allowed the
+                analysis to move beyond simply summarizing survey responses.
+            </p>
+
+        </div>
+
+
+        <h2>Key Areas of Analysis</h2>
+
+        <div class="analysis-grid">
+
+            <div class="analysis-card">
+
+                <div class="analysis-label">Products</div>
+
+                <h3>Top Products</h3>
+
+                <p>
+                    Used customer survey responses to identify products that
+                    performed strongest within the analyzed data.
+                </p>
+
+            </div>
+
+
+            <div class="analysis-card">
+
+                <div class="analysis-label">Customers</div>
+
+                <h3>Purchase Factors</h3>
+
+                <p>
+                    Examined the factors customers considered when making
+                    purchasing decisions.
+                </p>
+
+            </div>
+
+
+            <div class="analysis-card">
+
+                <div class="analysis-label">Business Strategy</div>
+
+                <h3>Online Sales</h3>
+
+                <p>
+                    Used the findings to identify opportunities and strategies
+                    for increasing online sales.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h2>Excel Approach</h2>
+
+            <p>
+                XLOOKUP and PivotTables played different roles in the analysis.
+                XLOOKUP helped connect information within the workbook, while
+                PivotTables provided a way to summarize and compare the
+                customer survey responses.
+            </p>
+
+            <p>
+                Together, these tools made it possible to transform the survey
+                data into organized comparisons that could be used to identify
+                customer preferences and purchasing patterns.
+            </p>
+
+
+            <h2>Business Application</h2>
+
+            <p>
+                The analysis connected customer survey responses to business
+                questions. Identifying top products and important purchase
+                factors provided information that could be used when developing
+                strategies intended to improve Terracotta's online sales.
+            </p>
+
+
+            <h2>Project Takeaway</h2>
+
+            <p>
+                This project demonstrated how customer survey data can be
+                transformed into business insights using Excel. Rather than
+                only summarizing responses, the analysis focused on identifying
+                patterns that could support decisions about products,
+                customers, and online sales.
+            </p>
+
+
+            <h2>Skills Applied</h2>
+
+            <p>
+                Excel, XLOOKUP, PivotTables, customer survey analysis,
+                categorical comparison, data organization, business analysis,
+                and translating customer data into business opportunities.
+            </p>
+
+        </div>
+
+
+        <div class="project-files">
+
+            <h2>Project Screenshots</h2>
+
+            <p>
+                The screenshots shown in this section will provide an overview
+                of the work completed for this project. If you are interested
+                in reviewing the complete project file or discussing the
+                analysis in greater detail, please contact me and I would be
+                happy to provide access.
+            </p>
+
+            <!-- TERRACOTTA PROJECT SCREENSHOTS WILL BE ADDED HERE LATER -->
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        © 2026 Alden Arce-Romero
+    </footer>
+
+</body>
+
+</html>
