@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UNESCO Heritage Sites Analysis | Alden Arce-Romero</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: #111827;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: #cbd5e1;
+        }
+
+        .project-header {
+            max-width: 850px;
+            margin: auto;
+            padding: 70px 0 40px;
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .project-header p {
+            color: #cbd5e1;
+            font-size: 1.05rem;
+        }
+
+        .project-tools {
+            margin-top: 18px;
+            color: #94a3b8 !important;
+        }
+
+        .project-content {
+            max-width: 850px;
+            margin: auto;
+            padding: 20px 0 80px;
+        }
+
+        .project-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 35px;
+        }
+
+        .project-card h2 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .project-card p {
+            color: #cbd5e1;
+            margin-bottom: 28px;
+        }
+
+        .project-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 20px;
+            margin-bottom: 35px;
+        }
+
+        .analysis-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 22px;
+        }
+
+        .analysis-card h3 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .analysis-card p {
+            color: #cbd5e1;
+            margin: 0;
+        }
+
+        .analysis-label {
+            color: #93c5fd;
+            font-size: 1.05rem;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        .project-files {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 35px;
+        }
+
+        .project-files h2 {
+            margin-bottom: 10px;
+        }
+
+        .project-files p {
+            color: #cbd5e1;
+            margin: 0;
+        }
+
+        footer {
+            background: #111827;
+            text-align: center;
+            padding: 25px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 950px) {
+
+            .project-header,
+            .project-content {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 18px 6%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .project-header {
+                padding: 50px 0 30px;
+            }
+
+            .project-header h1 {
+                font-size: 2rem;
+            }
+
+            .analysis-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <a href="../index.html">
+            <strong>Alden Arce-Romero</strong>
+        </a>
+
+        <a class="back-link" href="../projects.html">
+            ← Back to Other Projects
+        </a>
+
+    </nav>
+
+
+    <section class="project-header">
+
+        <h1>UNESCO Heritage Sites Analysis</h1>
+
+        <p>
+            Analyzed UNESCO World Heritage Site data in Tableau to compare
+            site classifications, endangered status, geographic distribution,
+            and land coverage across countries.
+        </p>
+
+        <p class="project-tools">
+            Tableau • Filters • Data Visualization
+        </p>
+
+    </section>
+
+
+    <main class="project-content">
+
+        <div class="project-card">
+
+            <h2>Project Overview</h2>
+
+            <p>
+                This project used UNESCO World Heritage Site data to explore
+                how protected heritage sites are distributed and classified
+                around the world. I created Tableau visualizations that made it
+                possible to compare different types of sites and examine
+                differences between countries.
+            </p>
+
+
+            <h2>Site Classification Analysis</h2>
+
+            <p>
+                I compared UNESCO sites based on their classification as
+                cultural, natural, or mixed heritage sites. Separating the
+                sites into these categories made it easier to understand the
+                different types of locations represented within the World
+                Heritage dataset.
+            </p>
+
+
+            <h2>Endangered Sites</h2>
+
+            <p>
+                The analysis also examined sites identified as endangered.
+                This added another dimension to the dataset by distinguishing
+                sites facing greater preservation concerns from the broader
+                collection of World Heritage Sites.
+            </p>
+
+
+            <h2>Country-Level Analysis</h2>
+
+            <p>
+                I analyzed the data geographically to compare countries based
+                on the number of World Heritage Sites they contained. Tableau
+                made it possible to visualize the geographic distribution of
+                these sites and compare countries more efficiently.
+            </p>
+
+
+            <h2>Land Coverage</h2>
+
+            <p>
+                In addition to counting the number of sites, I examined the
+                physical area dedicated to World Heritage Sites. This provided
+                another way to compare countries because a country with many
+                sites does not necessarily dedicate the greatest amount of
+                land to heritage protection.
+            </p>
+
+        </div>
+
+
+        <h2>Key Areas of Analysis</h2>
+
+        <div class="analysis-grid">
+
+            <div class="analysis-card">
+
+                <div class="analysis-label">Classification</div>
+
+                <h3>Site Types</h3>
+
+                <p>
+                    Compared cultural, natural, and mixed World Heritage Sites
+                    to examine the composition of the UNESCO dataset.
+                </p>
+
+            </div>
+
+
+            <div class="analysis-card">
+
+                <div class="analysis-label">Preservation</div>
+
+                <h3>Endangered Sites</h3>
+
+                <p>
+                    Examined endangered status to distinguish sites facing
+                    greater preservation concerns.
+                </p>
+
+            </div>
+
+
+            <div class="analysis-card">
+
+                <div class="analysis-label">Geography</div>
+
+                <h3>Sites by Country</h3>
+
+                <p>
+                    Compared countries based on the quantity and geographic
+                    distribution of World Heritage Sites.
+                </p>
+
+            </div>
+
+
+            <div class="analysis-card">
+
+                <div class="analysis-label">Physical Area</div>
+
+                <h3>Land Coverage</h3>
+
+                <p>
+                    Analyzed the physical area dedicated to World Heritage
+                    Sites to provide another perspective beyond site counts.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h2>Visualization Approach</h2>
+
+            <p>
+                Tableau was used to create visual comparisons across the UNESCO
+                dataset. Filters allowed different classifications and groups
+                of sites to be explored, while geographic visualizations helped
+                communicate country-level differences.
+            </p>
+
+            <p>
+                Combining site counts with physical land coverage also allowed
+                the dataset to be examined from two perspectives: how many
+                protected sites a country contained and how much physical area
+                those sites represented.
+            </p>
+
+
+            <h2>Project Takeaway</h2>
+
+            <p>
+                The project demonstrated that World Heritage Sites can be
+                compared in several different ways. Site classification and
+                endangered status describe characteristics of the sites
+                themselves, while country-level counts and land coverage
+                provide geographic measures for comparing heritage protection
+                across locations.
+            </p>
+
+
+            <h2>Skills Applied</h2>
+
+            <p>
+                Tableau, filters, geographic visualization, comparative
+                analysis, categorical analysis, data visualization, and
+                communicating geographic patterns.
+            </p>
+
+        </div>
+
+
+        <div class="project-files">
+
+            <h2>Project Screenshots</h2>
+
+            <p>
+                The screenshots shown in this section will provide an overview
+                of the work completed for this project. If you are interested
+                in reviewing the complete project file or discussing the
+                analysis in greater detail, please contact me and I would be
+                happy to provide access.
+            </p>
+
+            <!-- UNESCO PROJECT SCREENSHOTS WILL BE ADDED HERE LATER -->
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        © 2026 Alden Arce-Romero
+    </footer>
+
+</body>
+
+</html>
