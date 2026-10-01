@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Forbes Earnings Analysis | Alden Arce-Romero</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: #111827;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: #cbd5e1;
+        }
+
+        .project-header {
+            max-width: 850px;
+            margin: auto;
+            padding: 70px 0 40px;
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .project-header p {
+            color: #cbd5e1;
+            font-size: 1.05rem;
+        }
+
+        .project-tools {
+            margin-top: 18px;
+            color: #94a3b8 !important;
+        }
+
+        .project-content {
+            max-width: 850px;
+            margin: auto;
+            padding: 20px 0 80px;
+        }
+
+        .project-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 35px;
+        }
+
+        .project-card h2 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .project-card p {
+            color: #cbd5e1;
+            margin-bottom: 28px;
+        }
+
+        .project-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .findings-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 20px;
+            margin-bottom: 35px;
+        }
+
+        .finding-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 22px;
+        }
+
+        .finding-card h3 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            color: #f8fafc;
+        }
+
+        .finding-card p {
+            color: #cbd5e1;
+            margin: 0;
+        }
+
+        .finding-label {
+            color: #93c5fd;
+            font-size: 1.05rem;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        .project-files {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 35px;
+        }
+
+        .project-files h2 {
+            margin-bottom: 10px;
+        }
+
+        .project-files p {
+            color: #cbd5e1;
+            margin: 0;
+        }
+
+        footer {
+            background: #111827;
+            text-align: center;
+            padding: 25px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 950px) {
+
+            .project-header,
+            .project-content {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 18px 6%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .project-header {
+                padding: 50px 0 30px;
+            }
+
+            .project-header h1 {
+                font-size: 2rem;
+            }
+
+            .findings-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <a href="../index.html">
+            <strong>Alden Arce-Romero</strong>
+        </a>
+
+        <a class="back-link" href="../projects.html">
+            ← Back to Other Projects
+        </a>
+
+    </nav>
+
+
+    <section class="project-header">
+
+        <h1>Forbes Earnings Analysis</h1>
+
+        <p>
+            Analyzed Forbes celebrity earnings data from 2005–2020 to compare
+            the earnings of actors and actresses and examine how the difference
+            in earnings changed over time.
+        </p>
+
+        <p class="project-tools">
+            Tableau • Data Visualization • Comparative Analysis
+        </p>
+
+    </section>
+
+
+    <main class="project-content">
+
+        <div class="project-card">
+
+            <h2>Project Overview</h2>
+
+            <p>
+                This project used Forbes earnings data from 2005 through 2020
+                to explore differences in compensation between actors and
+                actresses. I used Tableau to compare earnings between the two
+                groups and visualize how those differences changed throughout
+                the period represented in the dataset.
+            </p>
+
+
+            <h2>Analysis</h2>
+
+            <p>
+                I compared the average earnings of actors and actresses to
+                evaluate differences between the two groups. Looking at the
+                averages provided a broader view of compensation than focusing
+                only on individual celebrities.
+            </p>
+
+            <p>
+                I also examined the highest earners in the dataset. This made
+                it possible to compare the celebrities at the top of each group
+                and determine how individual high earners contributed to the
+                overall earnings patterns.
+            </p>
+
+            <p>
+                Finally, I analyzed earnings across the 2005–2020 period to
+                visualize how the difference between actors and actresses
+                changed over time rather than treating the earnings gap as a
+                single fixed value.
+            </p>
+
+        </div>
+
+
+        <h2>Key Areas of Analysis</h2>
+
+        <div class="findings-grid">
+
+            <div class="finding-card">
+
+                <div class="finding-label">Average Earnings</div>
+
+                <h3>Actors vs. Actresses</h3>
+
+                <p>
+                    Compared average earnings between actors and actresses to
+                    examine differences in compensation across the dataset.
+                </p>
+
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="finding-label">Top Earners</div>
+
+                <h3>Highest-Paid Celebrities</h3>
+
+                <p>
+                    Examined the highest earners to understand how the top
+                    performers compared across the two groups.
+                </p>
+
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="finding-label">2005–2020</div>
+
+                <h3>Earnings Over Time</h3>
+
+                <p>
+                    Visualized the earnings data across multiple years to
+                    examine how the difference between actors and actresses
+                    changed over time.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h2>Visualization Approach</h2>
+
+            <p>
+                Tableau was used to turn the earnings data into visual
+                comparisons. Rather than evaluating the dataset only through
+                individual records, the visualizations made it possible to
+                compare groups, identify top earners, and examine changes
+                across years.
+            </p>
+
+
+            <h2>Takeaway</h2>
+
+            <p>
+                The project demonstrated how compensation data can be analyzed
+                from several perspectives. Comparing averages provided an
+                overall view of earnings differences, examining top earners
+                showed the influence of individual celebrities, and analyzing
+                the data over time provided context for how the earnings gap
+                changed between 2005 and 2020.
+            </p>
+
+
+            <h2>Skills Applied</h2>
+
+            <p>
+                Tableau, data visualization, comparative analysis, trend
+                analysis, aggregation, and communicating differences in
+                earnings through visual data.
+            </p>
+
+        </div>
+
+
+        <div class="project-files">
+
+            <h2>Project Screenshots</h2>
+
+            <p>
+                The screenshots shown in this section will provide an overview
+                of the work completed for this project. If you are interested
+                in reviewing the complete project file or discussing the
+                analysis in greater detail, please contact me and I would be
+                happy to provide access.
+            </p>
+
+            <!-- FORBES PROJECT SCREENSHOTS WILL BE ADDED HERE LATER -->
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        © 2026 Alden Arce-Romero
+    </footer>
+
+</body>
+
+</html>
