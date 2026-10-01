@@ -38,42 +38,61 @@
             color: #cbd5e1;
         }
 
+
+        /* HEADER */
+
         .project-header {
-            padding: 70px 0 40px;
-            max-width: 1100px;
+            max-width: 850px;
             margin: auto;
+            padding: 70px 0 40px;
         }
 
         .project-header h1 {
-            font-size: 2.7rem;
+            font-size: 2.5rem;
             margin-bottom: 15px;
         }
 
         .project-header p {
-            max-width: 850px;
             color: #cbd5e1;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
         }
 
         .project-tools {
-            margin-top: 20px;
-            color: #94a3b8;
+            margin-top: 18px;
+            color: #94a3b8 !important;
         }
 
-        .visualization-section {
-            width: 100%;
-            max-width: 1100px;
+
+        /* MAIN CONTENT */
+
+        .project-content {
+            max-width: 850px;
             margin: auto;
-            padding: 20px 0 70px;
+            padding: 20px 0 80px;
+        }
+
+
+        /* INTERACTIVE TABLEAU DASHBOARD */
+
+        .visualization-section {
+            width: 1100px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 45px;
+        }
+
+        .visualization-section h2 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
         }
 
         .tableau-container {
             width: 100%;
             height: 650px;
-            margin: auto;
             background: white;
             border-radius: 12px;
             overflow: hidden;
+            border: 1px solid #334155;
         }
 
         tableau-viz {
@@ -82,21 +101,72 @@
             height: 650px;
         }
 
-        .analysis-section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 20px 0 80px;
+
+        /* PROJECT INFORMATION */
+
+        .project-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 35px;
         }
 
-        .analysis-section h2 {
-            margin-top: 40px;
-            margin-bottom: 12px;
-            font-size: 1.7rem;
+        .project-card h2 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
         }
 
-        .analysis-section p {
+        .project-card p {
             color: #cbd5e1;
+            margin-bottom: 28px;
         }
+
+        .project-card p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* KEY FINDINGS */
+
+        .section-title {
+            margin-bottom: 18px;
+            font-size: 1.5rem;
+        }
+
+        .findings-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-bottom: 35px;
+        }
+
+        .finding-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 22px;
+        }
+
+        .finding-card h3 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .finding-card p {
+            color: #cbd5e1;
+            margin: 0;
+        }
+
+        .finding-label {
+            color: #93c5fd;
+            font-size: 1.05rem;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+
+        /* FOOTER */
 
         footer {
             background: #111827;
@@ -105,19 +175,29 @@
             color: #94a3b8;
         }
 
+
+        /* TABLET */
+
         @media (max-width: 1200px) {
 
             .project-header,
-            .visualization-section,
-            .analysis-section {
+            .project-content {
                 width: 90%;
             }
+
+            .visualization-section {
+                width: 100%;
+                margin-left: 0;
+                transform: none;
+            }
         }
+
+
+        /* SMALLER SCREENS */
 
         @media (max-width: 900px) {
 
             .tableau-container {
-                width: 100%;
                 height: 500px;
             }
 
@@ -127,10 +207,16 @@
             }
         }
 
+
+        /* MOBILE */
+
         @media (max-width: 700px) {
 
             nav {
-                padding: 20px 5%;
+                padding: 18px 6%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
             }
 
             .project-header {
@@ -141,15 +227,13 @@
                 font-size: 2rem;
             }
 
-            .visualization-section {
-                padding: 20px 0 50px;
-            }
-
-            .analysis-section {
-                padding: 20px 0 60px;
+            .findings-grid {
+                grid-template-columns: 1fr;
             }
         }
+
     </style>
+
 
     <script
         type="module"
@@ -158,7 +242,9 @@
 
 </head>
 
+
 <body>
+
 
     <nav>
 
@@ -178,74 +264,190 @@
         <h1>Intel Energy Analysis</h1>
 
         <p>
-            Analyzed regional electricity production, demand, and renewable energy
-            availability to evaluate potential locations for a future data center.
+            Analyzed regional electricity production, demand, and renewable
+            energy availability to evaluate potential locations for a future
+            data center.
         </p>
 
         <p class="project-tools">
-            Tableau • Data Visualization • Data Analysis
+            Tableau • Data Visualization • Data Analysis • Business Analysis
         </p>
 
     </section>
 
 
-    <section class="visualization-section">
-
-        <div class="tableau-container">
-
-            <tableau-viz
-                id="tableau-viz"
-                src="https://public.tableau.com/views/Completed_Intel-Student/Dashboard"
-                width="1100px"
-                height="650px"
-                toolbar="bottom">
-            </tableau-viz>
-
-        </div>
-
-    </section>
+    <main class="project-content">
 
 
-    <section class="analysis-section">
+        <!-- INTERACTIVE TABLEAU DASHBOARD -->
 
-        <h2>Project Overview</h2>
+        <section class="visualization-section">
 
-        <p>
-            This project examined electricity production and demand across different
-            U.S. regions to understand where energy infrastructure could best support
-            the operation of a data center.
-        </p>
+            <h2>Interactive Dashboard</h2>
 
+            <div class="tableau-container">
 
-        <h2>Key Findings</h2>
+                <tableau-viz
+                    id="tableau-viz"
+                    src="https://public.tableau.com/views/Completed_Intel-Student/Dashboard"
+                    width="1100px"
+                    height="650px"
+                    toolbar="bottom">
+                </tableau-viz>
 
-        <p>
-            Five regions were identified as net energy producers: Mid-Atlantic,
-            Northwest, Southwest, Central, and Southeast. The Northwest had the
-            highest percentage of renewable energy generation at 52.25%, followed
-            by Central at 41.01% and California at 37.45%. Of the top three regions
-            for renewable energy, Northwest and Central were also net energy
-            producers, making them particularly strong candidates for further
-            evaluation.
-        </p>
+            </div>
+
+        </section>
 
 
-        <h2>Recommendation</h2>
+        <!-- PROJECT OVERVIEW -->
 
-        <p>
-            I recommended the Central (CENT) region as a potential location for
-            Intel's next data center. The region was a net energy producer while
-            also ranking second in renewable energy generation at 41.01%. This
-            combination provided a strong balance between energy availability and
-            renewable energy use.
-        </p>
+        <section class="project-card">
 
-    </section>
+            <h2>Project Overview</h2>
+
+            <p>
+                This project examined electricity production and demand across
+                different U.S. regions to understand where energy infrastructure
+                could best support the operation of a data center.
+            </p>
+
+
+            <h2>Energy Analysis</h2>
+
+            <p>
+                I compared electricity production and demand to identify regions
+                that generated more electricity than they consumed. I then
+                evaluated renewable energy generation to determine which regions
+                combined energy availability with a strong renewable energy
+                presence.
+            </p>
+
+
+            <h2>Business Focus</h2>
+
+            <p>
+                The analysis was used to evaluate potential data center locations.
+                Rather than considering energy production alone, the analysis
+                compared both net energy production and renewable energy
+                generation when developing the final recommendation.
+            </p>
+
+        </section>
+
+
+        <!-- KEY FINDINGS -->
+
+        <h2 class="section-title">Key Findings</h2>
+
+        <section class="findings-grid">
+
+
+            <div class="finding-card">
+
+                <div class="finding-label">
+                    5 Regions
+                </div>
+
+                <h3>Net Energy Producers</h3>
+
+                <p>
+                    Mid-Atlantic, Northwest, Southwest, Central, and Southeast
+                    were identified as net energy-producing regions.
+                </p>
+
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="finding-label">
+                    52.25%
+                </div>
+
+                <h3>Northwest</h3>
+
+                <p>
+                    The Northwest had the highest percentage of renewable
+                    energy generation among the regions analyzed.
+                </p>
+
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="finding-label">
+                    41.01%
+                </div>
+
+                <h3>Central</h3>
+
+                <p>
+                    Central ranked second in renewable energy generation while
+                    also operating as a net energy producer.
+                </p>
+
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="finding-label">
+                    37.45%
+                </div>
+
+                <h3>California</h3>
+
+                <p>
+                    California ranked third among the leading regions for
+                    renewable energy generation.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- RECOMMENDATION -->
+
+        <section class="project-card">
+
+            <h2>Recommendation</h2>
+
+            <p>
+                I recommended the Central (CENT) region as a potential location
+                for Intel's next data center. The region was a net energy
+                producer while also ranking second in renewable energy
+                generation at 41.01%.
+            </p>
+
+            <p>
+                This combination provided a strong balance between energy
+                availability and renewable energy use.
+            </p>
+
+
+            <h2>Skills Applied</h2>
+
+            <p>
+                Tableau, data visualization, data analysis, calculated fields,
+                regional comparison, energy supply and demand analysis,
+                renewable energy analysis, dashboard development, and
+                translating findings into a business recommendation.
+            </p>
+
+        </section>
+
+
+    </main>
 
 
     <footer>
         © 2026 Alden Arce-Romero
     </footer>
+
 
 </body>
 
