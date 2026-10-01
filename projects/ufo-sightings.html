@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UFO Sightings Analysis | Alden Arce-Romero</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: #111827;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: #cbd5e1;
+        }
+
+        .project-header {
+            max-width: 850px;
+            margin: auto;
+            padding: 70px 0 40px;
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .project-header p {
+            color: #cbd5e1;
+            font-size: 1.05rem;
+        }
+
+        .project-tools {
+            margin-top: 18px;
+            color: #94a3b8 !important;
+        }
+
+        .project-content {
+            max-width: 850px;
+            margin: auto;
+            padding: 20px 0 80px;
+        }
+
+        .project-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 35px;
+        }
+
+        .project-card h2 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .project-card p {
+            color: #cbd5e1;
+            margin-bottom: 28px;
+        }
+
+        .project-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .findings-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 20px;
+            margin-bottom: 35px;
+        }
+
+        .finding-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 22px;
+        }
+
+        .finding-card h3 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .finding-card p {
+            color: #cbd5e1;
+            margin: 0;
+        }
+
+        .rank {
+            color: #93c5fd;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .project-files {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 35px;
+        }
+
+        .project-files h2 {
+            margin-bottom: 10px;
+        }
+
+        .project-files p {
+            color: #cbd5e1;
+            margin: 0;
+        }
+
+        footer {
+            background: #111827;
+            text-align: center;
+            padding: 25px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 950px) {
+
+            .project-header,
+            .project-content {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 18px 6%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .project-header {
+                padding: 50px 0 30px;
+            }
+
+            .project-header h1 {
+                font-size: 2rem;
+            }
+
+            .findings-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <a href="../index.html">
+            <strong>Alden Arce-Romero</strong>
+        </a>
+
+        <a class="back-link" href="../projects.html">
+            ← Back to Other Projects
+        </a>
+
+    </nav>
+
+
+    <section class="project-header">
+
+        <h1>UFO Sightings Analysis</h1>
+
+        <p>
+            Used Tableau to clean and transform UFO sighting data and visualize
+            geographic and observational patterns across the dataset.
+        </p>
+
+        <p class="project-tools">
+            Tableau • Calculated Fields • Data Visualization
+        </p>
+
+    </section>
+
+
+    <main class="project-content">
+
+        <div class="project-card">
+
+            <h2>Project Overview</h2>
+
+            <p>
+                This project explored UFO sighting data using Tableau. The goal
+                was to transform the raw location information into fields that
+                could be analyzed more effectively and then create visualizations
+                that made patterns in the sightings easier to identify.
+            </p>
+
+
+            <h2>Data Preparation</h2>
+
+            <p>
+                The original location data required additional preparation before
+                it could be used effectively in the visualizations. I created
+                calculated fields in Tableau to extract and standardize geographic
+                information from the dataset.
+            </p>
+
+            <p>
+                Functions such as SPLIT were used to separate location information,
+                allowing state values to be isolated from the original field. This
+                made it possible to compare sightings geographically instead of
+                relying on the original combined location values.
+            </p>
+
+
+            <h2>Analysis</h2>
+
+            <p>
+                After preparing the data, I created Tableau visualizations to
+                examine how UFO sightings were distributed across different
+                locations. This made it possible to compare states and identify
+                areas with particularly high numbers of reported sightings.
+            </p>
+
+            <p>
+                The project also explored characteristics of the sightings beyond
+                geography, including patterns associated with when sightings
+                occurred and the reported shapes of the observed objects.
+            </p>
+
+        </div>
+
+
+        <h2>Key Findings</h2>
+
+        <div class="findings-grid">
+
+            <div class="finding-card">
+
+                <div class="rank">#1</div>
+
+                <h3>California</h3>
+
+                <p>
+                    California had the highest number of UFO sightings in the
+                    analyzed data.
+                </p>
+
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="rank">#2</div>
+
+                <h3>Florida</h3>
+
+                <p>
+                    Florida appeared among the states with the largest number
+                    of reported sightings.
+                </p>
+
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="rank">#3</div>
+
+                <h3>Texas</h3>
+
+                <p>
+                    Texas was also one of the leading states by total reported
+                    UFO sightings.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h2>Visualization Approach</h2>
+
+            <p>
+                Tableau was used not only to visualize the dataset but also to
+                transform it. Calculated fields allowed information contained
+                inside larger text fields to become separate dimensions that
+                could be used in charts and geographic comparisons.
+            </p>
+
+            <p>
+                The resulting visualizations made it easier to compare sightings
+                by state and explore additional patterns involving country,
+                month, reported shape, and time of day.
+            </p>
+
+
+            <h2>Takeaway</h2>
+
+            <p>
+                The analysis showed that reported UFO sightings were not evenly
+                distributed geographically. California, Florida, and Texas
+                appeared most frequently among the states in the dataset,
+                demonstrating how geographic visualization can quickly reveal
+                concentrations that are difficult to identify from raw records
+                alone.
+            </p>
+
+
+            <h2>Skills Applied</h2>
+
+            <p>
+                Tableau, calculated fields, data cleaning, SPLIT functions,
+                geographic analysis, data transformation, and data visualization.
+            </p>
+
+        </div>
+
+
+        <div class="project-files">
+
+            <h2>Project Screenshots</h2>
+
+            <p>
+                The screenshots shown in this section will provide an overview
+                of the work completed for this project. If you are interested
+                in reviewing the complete project file or discussing the
+                analysis in greater detail, please contact me and I would be
+                happy to provide access.
+            </p>
+
+            <!-- UFO PROJECT SCREENSHOTS WILL BE ADDED HERE LATER -->
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        © 2026 Alden Arce-Romero
+    </footer>
+
+</body>
+
+</html>
