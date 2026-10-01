@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Winter Sports Analysis | Alden Arce-Romero</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: #111827;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: #cbd5e1;
+        }
+
+        .project-header {
+            max-width: 850px;
+            margin: auto;
+            padding: 70px 0 40px;
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .project-header p {
+            color: #cbd5e1;
+            font-size: 1.05rem;
+        }
+
+        .project-tools {
+            margin-top: 18px;
+            color: #94a3b8 !important;
+        }
+
+        .project-content {
+            max-width: 850px;
+            margin: auto;
+            padding: 20px 0 80px;
+        }
+
+        .project-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 35px;
+        }
+
+        .project-card h2 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .project-card p {
+            color: #cbd5e1;
+            margin-bottom: 28px;
+        }
+
+        .project-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 20px;
+            margin-bottom: 35px;
+        }
+
+        .analysis-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 22px;
+        }
+
+        .analysis-card h3 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .analysis-card p {
+            color: #cbd5e1;
+            margin: 0;
+        }
+
+        .analysis-label {
+            color: #93c5fd;
+            font-size: 1.05rem;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        .project-files {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 35px;
+        }
+
+        .project-files h2 {
+            margin-bottom: 10px;
+        }
+
+        .project-files p {
+            color: #cbd5e1;
+            margin: 0;
+        }
+
+        footer {
+            background: #111827;
+            text-align: center;
+            padding: 25px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 950px) {
+
+            .project-header,
+            .project-content {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 18px 6%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .project-header {
+                padding: 50px 0 30px;
+            }
+
+            .project-header h1 {
+                font-size: 2rem;
+            }
+
+            .analysis-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <a href="../index.html">
+            <strong>Alden Arce-Romero</strong>
+        </a>
+
+        <a class="back-link" href="../projects.html">
+            ← Back to Other Projects
+        </a>
+
+    </nav>
+
+
+    <section class="project-header">
+
+        <h1>Winter Sports Analysis</h1>
+
+        <p>
+            Analyzed Google Trends data for nine Olympic sports to identify
+            cyclical patterns in public interest, event-driven spikes, and
+            opportunities for seasonal content and marketing strategies.
+        </p>
+
+        <p class="project-tools">
+            Excel • Google Trends • Trend Analysis • Data Visualization
+        </p>
+
+    </section>
+
+
+    <main class="project-content">
+
+        <div class="project-card">
+
+            <h2>Project Overview</h2>
+
+            <p>
+                This project analyzed Google Trends search-interest data for
+                nine Olympic sports. The goal was to understand how public
+                interest in different sports changed over time and determine
+                whether recognizable patterns appeared within the search data.
+            </p>
+
+
+            <h2>Search Interest Analysis</h2>
+
+            <p>
+                I compared search-interest trends across the sports to examine
+                how their popularity changed over time. Looking at multiple
+                sports together made it possible to identify differences in
+                when and how strongly public interest increased.
+            </p>
+
+
+            <h2>Cyclical Patterns</h2>
+
+            <p>
+                The analysis identified cyclical patterns in public interest.
+                Instead of remaining constant, interest in the sports changed
+                over time and showed recurring periods of increased attention.
+            </p>
+
+
+            <h2>Event-Driven Spikes</h2>
+
+            <p>
+                I also identified spikes in search interest associated with
+                major sporting events. These increases demonstrated how public
+                attention can change significantly when a sport receives
+                greater exposure.
+            </p>
+
+
+            <h2>Sport Comparisons</h2>
+
+            <p>
+                The visualizations allowed trends for different sports to be
+                compared, including sports such as hockey and snowboarding.
+                Comparing the series helped show that different sports can
+                experience different patterns and levels of public interest.
+            </p>
+
+        </div>
+
+
+        <h2>Key Areas of Analysis</h2>
+
+        <div class="analysis-grid">
+
+            <div class="analysis-card">
+
+                <div class="analysis-label">Nine Olympic Sports</div>
+
+                <h3>Interest Comparison</h3>
+
+                <p>
+                    Compared Google Trends data across nine sports to examine
+                    differences in public search interest over time.
+                </p>
+
+            </div>
+
+
+            <div class="analysis-card">
+
+                <div class="analysis-label">Trend Analysis</div>
+
+                <h3>Cyclical Interest</h3>
+
+                <p>
+                    Identified recurring patterns showing that interest in
+                    Olympic sports changes across different periods.
+                </p>
+
+            </div>
+
+
+            <div class="analysis-card">
+
+                <div class="analysis-label">Major Events</div>
+
+                <h3>Interest Spikes</h3>
+
+                <p>
+                    Identified event-driven increases in search activity when
+                    public attention toward particular sports increased.
+                </p>
+
+            </div>
+
+
+            <div class="analysis-card">
+
+                <div class="analysis-label">Business Application</div>
+
+                <h3>Seasonal Strategy</h3>
+
+                <p>
+                    Used the timing of interest patterns to provide insights
+                    for content strategy and seasonal marketing.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h2>Visualization Approach</h2>
+
+            <p>
+                I created charts that displayed search interest over time so
+                that changes in popularity could be compared visually. This
+                approach made recurring trends and sudden spikes easier to
+                recognize than they would have been from reviewing the raw
+                Google Trends values alone.
+            </p>
+
+
+            <h2>Business Application</h2>
+
+            <p>
+                The timing of search-interest increases can help inform when
+                sports-related content or marketing campaigns may receive
+                greater attention. The cyclical and event-driven patterns
+                identified in the analysis provided insights that could be
+                used to guide content strategy and seasonal marketing.
+            </p>
+
+
+            <h2>Project Takeaway</h2>
+
+            <p>
+                This project demonstrated that search-interest data can provide
+                useful information about when public attention changes. By
+                comparing nine Olympic sports over time, I was able to identify
+                recurring patterns and event-driven spikes and connect those
+                findings to potential marketing and content decisions.
+            </p>
+
+
+            <h2>Skills Applied</h2>
+
+            <p>
+                Excel, Google Trends, trend analysis, data visualization,
+                time-series comparison, pattern identification, comparative
+                analysis, and translating trends into business insights.
+            </p>
+
+        </div>
+
+
+        <div class="project-files">
+
+            <h2>Project Screenshots</h2>
+
+            <p>
+                The screenshots shown in this section will provide an overview
+                of the work completed for this project. If you are interested
+                in reviewing the complete project file or discussing the
+                analysis in greater detail, please contact me and I would be
+                happy to provide access.
+            </p>
+
+            <!-- WINTER SPORTS PROJECT SCREENSHOTS WILL BE ADDED HERE LATER -->
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        © 2026 Alden Arce-Romero
+    </footer>
+
+</body>
+
+</html>
