@@ -38,6 +38,9 @@
             color: #cbd5e1;
         }
 
+
+        /* HEADER */
+
         .project-header {
             max-width: 850px;
             margin: auto;
@@ -59,36 +62,23 @@
             color: #94a3b8 !important;
         }
 
+
+        /* MAIN CONTENT */
+
         .project-content {
             max-width: 850px;
             margin: auto;
             padding: 20px 0 80px;
         }
 
-        .project-card {
-            background: #1e293b;
-            border: 1px solid #334155;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 35px;
-        }
 
-        .project-card h2 {
-            margin-bottom: 10px;
-            font-size: 1.4rem;
-        }
-
-        .project-card p {
-            color: #cbd5e1;
-            margin-bottom: 28px;
-        }
-
-        .project-card p:last-child {
-            margin-bottom: 0;
-        }
+        /* INTERACTIVE WORKBOOK */
 
         .workbook-section {
-            margin-bottom: 35px;
+            width: 1100px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 45px;
         }
 
         .workbook-section h2 {
@@ -112,11 +102,43 @@
             display: block;
         }
 
+
+        /* PROJECT INFORMATION CARDS */
+
+        .project-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 35px;
+        }
+
+        .project-card h2 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .project-card p {
+            color: #cbd5e1;
+            margin-bottom: 28px;
+        }
+
+        .project-card p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* KEY FINDINGS */
+
+        .section-title {
+            margin-bottom: 18px;
+            font-size: 1.5rem;
+        }
+
         .findings-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 18px;
-            margin-top: 20px;
             margin-bottom: 35px;
         }
 
@@ -144,6 +166,9 @@
             margin-bottom: 7px;
         }
 
+
+        /* FOOTER */
+
         footer {
             background: #111827;
             text-align: center;
@@ -151,13 +176,25 @@
             color: #94a3b8;
         }
 
-        @media (max-width: 950px) {
+
+        /* TABLET */
+
+        @media (max-width: 1200px) {
 
             .project-header,
             .project-content {
                 width: 90%;
             }
+
+            .workbook-section {
+                width: 100%;
+                margin-left: 0;
+                transform: none;
+            }
         }
+
+
+        /* MOBILE */
 
         @media (max-width: 700px) {
 
@@ -184,11 +221,13 @@
                 height: 500px;
             }
         }
+
     </style>
 
 </head>
 
 <body>
+
 
     <nav>
 
@@ -222,7 +261,10 @@
 
     <main class="project-content">
 
-        <div class="workbook-section">
+
+        <!-- INTERACTIVE WORKBOOK -->
+
+        <section class="workbook-section">
 
             <h2>Interactive Workbook</h2>
 
@@ -236,10 +278,12 @@
 
             </div>
 
-        </div>
+        </section>
 
 
-        <div class="project-card">
+        <!-- PROJECT OVERVIEW -->
+
+        <section class="project-card">
 
             <h2>Project Overview</h2>
 
@@ -273,16 +317,21 @@
                 within each location.
             </p>
 
-        </div>
+        </section>
 
 
-        <h2>Key Findings</h2>
+        <!-- KEY FINDINGS -->
 
-        <div class="findings-grid">
+        <h2 class="section-title">Key Findings</h2>
+
+        <section class="findings-grid">
+
 
             <div class="finding-card">
 
-                <div class="finding-label">50,036 Orders</div>
+                <div class="finding-label">
+                    50,036 Orders
+                </div>
 
                 <h3>Overall Delivery Time</h3>
 
@@ -296,7 +345,9 @@
 
             <div class="finding-card">
 
-                <div class="finding-label">San Francisco</div>
+                <div class="finding-label">
+                    San Francisco
+                </div>
 
                 <h3>Longest Delivery Time</h3>
 
@@ -310,7 +361,9 @@
 
             <div class="finding-card">
 
-                <div class="finding-label">14,343 Orders</div>
+                <div class="finding-label">
+                    14,343 Orders
+                </div>
 
                 <h3>New York City</h3>
 
@@ -324,7 +377,9 @@
 
             <div class="finding-card">
 
-                <div class="finding-label">3,945 Orders</div>
+                <div class="finding-label">
+                    3,945 Orders
+                </div>
 
                 <h3>Seattle</h3>
 
@@ -338,7 +393,9 @@
 
             <div class="finding-card">
 
-                <div class="finding-label">Chicago</div>
+                <div class="finding-label">
+                    Chicago
+                </div>
 
                 <h3>Average Order Price</h3>
 
@@ -352,7 +409,9 @@
 
             <div class="finding-card">
 
-                <div class="finding-label">Cuisine Preferences</div>
+                <div class="finding-label">
+                    Cuisine Preferences
+                </div>
 
                 <h3>Customer Demand</h3>
 
@@ -363,10 +422,13 @@
 
             </div>
 
-        </div>
+
+        </section>
 
 
-        <div class="project-card">
+        <!-- RECOMMENDATIONS -->
+
+        <section class="project-card">
 
             <h2>Recommendations</h2>
 
@@ -400,7 +462,8 @@
                 recommendations.
             </p>
 
-        </div>
+        </section>
+
 
     </main>
 
@@ -408,6 +471,7 @@
     <footer>
         © 2026 Alden Arce-Romero
     </footer>
+
 
 </body>
 
