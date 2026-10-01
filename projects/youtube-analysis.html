@@ -2,15 +2,12 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>YouTube Trending Analysis | Alden Arce-Romero</title>
 
     <style>
-
         * {
             box-sizing: border-box;
             margin: 0;
@@ -18,110 +15,143 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Arial, sans-serif;
             background: #0f172a;
-            color: #e5e7eb;
+            color: #f8fafc;
             line-height: 1.6;
         }
 
         nav {
             background: #111827;
-            padding: 18px 8%;
+            padding: 20px 10%;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        nav h2 {
-            color: white;
-        }
-
         nav a {
-            color: #d1d5db;
+            color: white;
             text-decoration: none;
         }
 
-        nav a:hover {
-            color: white;
+        .back-link {
+            color: #cbd5e1;
         }
 
         .project-header {
-            padding: 70px 10% 35px;
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 850px;
+            margin: auto;
+            padding: 70px 0 40px;
         }
 
         .project-header h1 {
-            color: white;
-            font-size: 2.7rem;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .project-header p {
+            color: #cbd5e1;
+            font-size: 1.05rem;
+        }
+
+        .project-tools {
+            margin-top: 18px;
+            color: #94a3b8 !important;
         }
 
         .project-content {
-            padding: 10px 10% 80px;
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 850px;
+            margin: auto;
+            padding: 20px 0 80px;
         }
 
-        .project-overview {
+        .project-card {
             background: #1e293b;
             border: 1px solid #334155;
-            border-radius: 10px;
-            padding: 25px;
+            border-radius: 12px;
+            padding: 30px;
             margin-bottom: 35px;
         }
 
-        .project-overview h2 {
-            color: white;
-            margin-bottom: 12px;
+        .project-card h2 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
         }
 
-        .project-overview p {
+        .project-card p {
             color: #cbd5e1;
             margin-bottom: 28px;
         }
 
-        .project-overview p:last-child {
+        .project-card p:last-child {
             margin-bottom: 0;
         }
 
-        .analysis-section h2 {
-            color: white;
-            margin-bottom: 18px;
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 20px;
+            margin-bottom: 35px;
         }
 
-        .project-disclaimer {
+        .analysis-card {
             background: #1e293b;
             border: 1px solid #334155;
             border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 30px;
+            padding: 22px;
         }
 
-        .project-disclaimer p {
-            color: #94a3b8;
-            font-size: 0.9rem;
+        .analysis-card h3 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
         }
 
-        .project-disclaimer strong {
-            color: #e5e7eb;
+        .analysis-card p {
+            color: #cbd5e1;
+            margin: 0;
         }
 
-        .project-disclaimer a {
+        .analysis-label {
+            color: #93c5fd;
+            font-size: 1.05rem;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        .project-files {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 35px;
+        }
+
+        .project-files h2 {
+            margin-bottom: 10px;
+        }
+
+        .project-files p {
+            color: #cbd5e1;
+            margin-bottom: 25px;
+        }
+
+        .project-files a {
             color: #93c5fd;
             text-decoration: none;
             font-weight: 600;
         }
 
-        .project-disclaimer a:hover {
+        .project-files a:hover {
             text-decoration: underline;
         }
 
         .analysis-image {
-            background: #1e293b;
+            background: #0f172a;
             border: 1px solid #334155;
             border-radius: 10px;
             padding: 12px;
-            margin-bottom: 30px;
+            margin-top: 20px;
         }
 
         .analysis-image img {
@@ -133,35 +163,40 @@
 
         footer {
             background: #111827;
-            color: #9ca3af;
             text-align: center;
-            padding: 20px;
+            padding: 25px;
+            color: #94a3b8;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 950px) {
+
+            .project-header,
+            .project-content {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 700px) {
 
             nav {
-                padding: 16px 5%;
-            }
-
-            nav h2 {
-                font-size: 1.1rem;
+                padding: 18px 6%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
             }
 
             .project-header {
-                padding: 50px 6% 30px;
+                padding: 50px 0 30px;
             }
 
             .project-header h1 {
                 font-size: 2rem;
             }
 
-            .project-content {
-                padding: 10px 6% 60px;
+            .analysis-grid {
+                grid-template-columns: 1fr;
             }
-
         }
-
     </style>
 
 </head>
@@ -170,46 +205,136 @@
 
     <nav>
 
-        <h2>Alden Arce-Romero</h2>
+        <a href="../index.html">
+            <strong>Alden Arce-Romero</strong>
+        </a>
 
-        <a href="../projects.html">← Back to Other Projects</a>
+        <a class="back-link" href="../projects.html">
+            ← Back to Other Projects
+        </a>
 
     </nav>
 
 
-    <header class="project-header">
+    <section class="project-header">
 
         <h1>YouTube Trending Analysis</h1>
 
-    </header>
+        <p>
+            Analyzed over 6,000 trending YouTube videos to examine differences
+            in video performance across content categories and identify patterns
+            associated with high-performing videos.
+        </p>
+
+        <p class="project-tools">
+            Excel • PivotTables • Data Analysis
+        </p>
+
+    </section>
 
 
     <main class="project-content">
 
-        <section class="project-overview">
+        <div class="project-card">
+
+            <h2>Project Overview</h2>
+
+            <p>
+                This project analyzed over 6,000 trending YouTube videos in
+                Excel. The goal was to examine video performance across content
+                categories and understand how performance differed depending
+                on the type of content being analyzed.
+            </p>
+
 
             <h2>Problem</h2>
 
             <p>
                 With thousands of videos competing for attention on YouTube,
                 performance can vary significantly depending on content category
-                and audience behavior. The goal of this project was to analyze
-                trending video data and determine what factors may help explain
-                high-performing videos.
+                and audience behavior. The goal was to determine what factors
+                may help explain high-performing videos.
             </p>
 
 
             <h2>Analysis</h2>
 
             <p>
-                I analyzed over 6,000 trending YouTube videos in Excel using
-                summary statistics, PivotTables, and data visualizations. I
-                compared the number of videos and average views across content
-                categories and examined the distribution of video views. The
-                analysis showed that video performance varied substantially
+                I used summary statistics, PivotTables, and data visualizations
+                to compare the number of videos and average views across content
+                categories. I also examined the distribution of video views to
+                better understand differences in performance throughout the
+                dataset.
+            </p>
+
+            <p>
+                The analysis showed that video performance varied substantially
                 across categories, meaning that the same view count did not
                 necessarily represent the same level of performance for every
                 type of video.
+            </p>
+
+        </div>
+
+
+        <h2>Key Areas of Analysis</h2>
+
+        <div class="analysis-grid">
+
+            <div class="analysis-card">
+
+                <div class="analysis-label">6,000+ Videos</div>
+
+                <h3>Trending Content</h3>
+
+                <p>
+                    Analyzed more than 6,000 trending YouTube videos to identify
+                    broader patterns in video performance.
+                </p>
+
+            </div>
+
+
+            <div class="analysis-card">
+
+                <div class="analysis-label">Categories</div>
+
+                <h3>Performance Comparison</h3>
+
+                <p>
+                    Compared the number of videos and average views across
+                    different content categories.
+                </p>
+
+            </div>
+
+
+            <div class="analysis-card">
+
+                <div class="analysis-label">Video Views</div>
+
+                <h3>Performance Distribution</h3>
+
+                <p>
+                    Examined the distribution of views to understand how
+                    performance varied throughout the dataset.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h2>Key Finding</h2>
+
+            <p>
+                Video performance varied substantially across content
+                categories. Because different categories can have different
+                typical levels of viewership, a single view threshold does not
+                necessarily represent the same level of performance across all
+                types of YouTube content.
             </p>
 
 
@@ -223,25 +348,30 @@
                 to help guide future content decisions.
             </p>
 
-        </section>
+
+            <h2>Skills Applied</h2>
+
+            <p>
+                Excel, PivotTables, summary statistics, data visualization,
+                categorical comparison, performance analysis, and translating
+                analytical findings into recommendations.
+            </p>
+
+        </div>
 
 
-        <section class="analysis-section">
+        <div class="project-files">
 
             <h2>Project Screenshots</h2>
 
-            <div class="project-disclaimer">
-
-                <p>
-                    <strong>Project Files:</strong> The screenshots shown below provide
-                    an overview of the work completed for this project. If you are
-                    interested in reviewing the complete project file or discussing
-                    the analysis in greater detail, please
-                    <a href="mailto:romero.alden@outlook.com">contact me</a>
-                    and I would be happy to provide access.
-                </p>
-
-            </div>
+            <p>
+                The screenshots shown below provide an overview of the work
+                completed for this project. If you are interested in reviewing
+                the complete project file or discussing the analysis in greater
+                detail, please
+                <a href="mailto:romero.alden@outlook.com">contact me</a>
+                and I would be happy to provide access.
+            </p>
 
 
             <div class="analysis-image">
@@ -267,15 +397,13 @@
 
             </div>
 
-        </section>
+        </div>
 
     </main>
 
 
     <footer>
-
-        <p>© 2026 Alden Arce-Romero</p>
-
+        © 2026 Alden Arce-Romero
     </footer>
 
 </body>
