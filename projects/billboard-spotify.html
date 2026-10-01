@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Billboard & Spotify Analysis | Alden Arce-Romero</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: #111827;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: #cbd5e1;
+        }
+
+        .project-header {
+            max-width: 850px;
+            margin: auto;
+            padding: 70px 0 40px;
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .project-header p {
+            color: #cbd5e1;
+            font-size: 1.05rem;
+        }
+
+        .project-tools {
+            margin-top: 18px;
+            color: #94a3b8 !important;
+        }
+
+        .project-content {
+            max-width: 850px;
+            margin: auto;
+            padding: 20px 0 80px;
+        }
+
+        .project-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 35px;
+        }
+
+        .project-card h2 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .project-card p {
+            color: #cbd5e1;
+            margin-bottom: 28px;
+        }
+
+        .project-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .findings-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 20px;
+            margin-bottom: 35px;
+        }
+
+        .finding-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 22px;
+        }
+
+        .finding-card h3 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .finding-card p {
+            color: #cbd5e1;
+            margin: 0;
+        }
+
+        .finding-label {
+            color: #93c5fd;
+            font-size: 1.05rem;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        .project-files {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 35px;
+        }
+
+        .project-files h2 {
+            margin-bottom: 10px;
+        }
+
+        .project-files p {
+            color: #cbd5e1;
+            margin: 0;
+        }
+
+        footer {
+            background: #111827;
+            text-align: center;
+            padding: 25px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 950px) {
+
+            .project-header,
+            .project-content {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 18px 6%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .project-header {
+                padding: 50px 0 30px;
+            }
+
+            .project-header h1 {
+                font-size: 2rem;
+            }
+
+            .findings-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <a href="../index.html">
+            <strong>Alden Arce-Romero</strong>
+        </a>
+
+        <a class="back-link" href="../projects.html">
+            ← Back to Other Projects
+        </a>
+
+    </nav>
+
+
+    <section class="project-header">
+
+        <h1>Billboard & Spotify Analysis</h1>
+
+        <p>
+            Analyzed Billboard Hot 100 genre data and Spotify audio features
+            to explore music trends and relationships between song
+            characteristics.
+        </p>
+
+        <p class="project-tools">
+            Excel • Data Analysis • Data Visualization
+        </p>
+
+    </section>
+
+
+    <main class="project-content">
+
+        <div class="project-card">
+
+            <h2>Project Overview</h2>
+
+            <p>
+                This project explored music data from Billboard and Spotify
+                using two different approaches. Billboard Hot 100 data was used
+                to examine the proportion of songs associated with different
+                genres, while Spotify audio-feature data was used to investigate
+                relationships between measurable characteristics of songs.
+            </p>
+
+
+            <h2>Billboard Hot 100 Analysis</h2>
+
+            <p>
+                I analyzed genre information from Billboard Hot 100 songs and
+                calculated genre proportions to compare how different types of
+                music were represented in the dataset.
+            </p>
+
+            <p>
+                Converting the genre counts into proportions made it easier to
+                compare categories relative to the overall dataset instead of
+                relying only on raw totals.
+            </p>
+
+
+            <h2>Spotify Audio Feature Analysis</h2>
+
+            <p>
+                I also analyzed Spotify audio-feature data to explore
+                relationships between characteristics assigned to songs.
+                Scatter plots were used to compare quantitative variables and
+                determine whether visible relationships or patterns existed
+                between different audio features.
+            </p>
+
+            <p>
+                This part of the project focused on using visualization as an
+                exploratory tool. Rather than looking at individual songs one
+                at a time, the scatter plots allowed patterns across many songs
+                to be evaluated simultaneously.
+            </p>
+
+        </div>
+
+
+        <h2>Key Areas of Analysis</h2>
+
+        <div class="findings-grid">
+
+            <div class="finding-card">
+
+                <div class="finding-label">Billboard Hot 100</div>
+
+                <h3>Genre Proportions</h3>
+
+                <p>
+                    Calculated the proportion of songs belonging to different
+                    genres to compare how music categories were represented
+                    within the Billboard dataset.
+                </p>
+
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="finding-label">Spotify</div>
+
+                <h3>Audio Features</h3>
+
+                <p>
+                    Examined quantitative audio characteristics to explore how
+                    different musical features varied across songs.
+                </p>
+
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="finding-label">Scatter Plots</div>
+
+                <h3>Relationships</h3>
+
+                <p>
+                    Used scatter plots to visually investigate relationships
+                    between Spotify audio features and identify patterns across
+                    the dataset.
+                </p>
+
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="finding-label">Comparison</div>
+
+                <h3>Music Trends</h3>
+
+                <p>
+                    Combined categorical and quantitative analysis techniques
+                    to explore music from both genre and audio-feature
+                    perspectives.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h2>Visualization Approach</h2>
+
+            <p>
+                Different visualizations were selected depending on the type
+                of question being answered. Genre proportions were useful for
+                comparing categorical music data, while scatter plots were
+                better suited for examining relationships between continuous
+                Spotify audio features.
+            </p>
+
+
+            <h2>Takeaway</h2>
+
+            <p>
+                The project demonstrated how the same general topic can require
+                different analytical approaches depending on the structure of
+                the data. Billboard genre data provided a categorical view of
+                music trends, while Spotify audio features allowed relationships
+                between measurable song characteristics to be explored.
+            </p>
+
+
+            <h2>Skills Applied</h2>
+
+            <p>
+                Excel, data analysis, data visualization, genre proportion
+                calculations, scatter plots, categorical analysis, quantitative
+                analysis, and exploratory data analysis.
+            </p>
+
+        </div>
+
+
+        <div class="project-files">
+
+            <h2>Project Screenshots</h2>
+
+            <p>
+                The screenshots shown in this section will provide an overview
+                of the work completed for this project. If you are interested
+                in reviewing the complete project file or discussing the
+                analysis in greater detail, please contact me and I would be
+                happy to provide access.
+            </p>
+
+            <!-- BILLBOARD & SPOTIFY PROJECT SCREENSHOTS WILL BE ADDED HERE LATER -->
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        © 2026 Alden Arce-Romero
+    </footer>
+
+</body>
+
+</html>
