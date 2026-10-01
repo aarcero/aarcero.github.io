@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Warby Parker A/B Test | Alden Arce-Romero</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: #111827;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: #cbd5e1;
+        }
+
+        .project-header {
+            max-width: 850px;
+            margin: auto;
+            padding: 70px 0 40px;
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .project-header p {
+            color: #cbd5e1;
+            font-size: 1.05rem;
+        }
+
+        .project-tools {
+            margin-top: 18px;
+            color: #94a3b8 !important;
+        }
+
+        .project-content {
+            max-width: 850px;
+            margin: auto;
+            padding: 20px 0 80px;
+        }
+
+        .project-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 35px;
+        }
+
+        .project-card h2 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .project-card p {
+            color: #cbd5e1;
+            margin-bottom: 28px;
+        }
+
+        .project-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .findings-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 20px;
+            margin-bottom: 35px;
+        }
+
+        .finding-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 22px;
+        }
+
+        .finding-card h3 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .finding-card p {
+            color: #cbd5e1;
+            margin: 0;
+        }
+
+        .metric {
+            color: #93c5fd;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .project-files {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 35px;
+        }
+
+        .project-files h2 {
+            margin-bottom: 10px;
+        }
+
+        .project-files p {
+            color: #cbd5e1;
+            margin: 0;
+        }
+
+        footer {
+            background: #111827;
+            text-align: center;
+            padding: 25px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 950px) {
+
+            .project-header,
+            .project-content {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 18px 6%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .project-header {
+                padding: 50px 0 30px;
+            }
+
+            .project-header h1 {
+                font-size: 2rem;
+            }
+
+            .findings-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <a href="../index.html">
+            <strong>Alden Arce-Romero</strong>
+        </a>
+
+        <a class="back-link" href="../projects.html">
+            ← Back to Other Projects
+        </a>
+
+    </nav>
+
+
+    <section class="project-header">
+
+        <h1>Warby Parker A/B Test</h1>
+
+        <p>
+            Evaluated an A/B experiment using statistical hypothesis testing
+            to determine whether the difference between the control and test
+            groups was statistically significant.
+        </p>
+
+        <p class="project-tools">
+            Excel • A/B Testing • Hypothesis Testing
+        </p>
+
+    </section>
+
+
+    <main class="project-content">
+
+        <div class="project-card">
+
+            <h2>Project Overview</h2>
+
+            <p>
+                This project used A/B testing and statistical analysis to compare
+                the performance of a control group and a test group. The goal was
+                to determine whether the difference observed between the two groups
+                represented meaningful evidence of a change or could reasonably
+                have occurred because of random variation.
+            </p>
+
+
+            <h2>Analysis</h2>
+
+            <p>
+                I compared the mean values of the control and test groups and
+                performed a statistical hypothesis test in Excel. The control
+                group produced a mean of 3.3373, while the test group produced
+                a slightly lower mean of 3.2767.
+            </p>
+
+            <p>
+                Although the two sample means were different, comparing the
+                averages alone was not enough to determine whether the experiment
+                produced meaningful evidence of a difference. The hypothesis
+                test was therefore used to evaluate the statistical significance
+                of the observed result.
+            </p>
+
+
+            <h2>Hypothesis Test</h2>
+
+            <p>
+                The statistical test produced a p-value of 0.1494. Using a
+                significance level of 0.05, the p-value was greater than the
+                threshold required to reject the null hypothesis.
+            </p>
+
+        </div>
+
+
+        <h2>Key Findings</h2>
+
+        <div class="findings-grid">
+
+            <div class="finding-card">
+
+                <div class="metric">3.3373</div>
+
+                <h3>Control Mean</h3>
+
+                <p>
+                    The control group had the higher observed average in the
+                    experiment.
+                </p>
+
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="metric">3.2767</div>
+
+                <h3>Test Mean</h3>
+
+                <p>
+                    The test group's observed average was slightly lower than
+                    the control group's average.
+                </p>
+
+            </div>
+
+
+            <div class="finding-card">
+
+                <div class="metric">0.1494</div>
+
+                <h3>P-Value</h3>
+
+                <p>
+                    The p-value exceeded the 0.05 significance threshold used
+                    to evaluate the experiment.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h2>Statistical Conclusion</h2>
+
+            <p>
+                The experiment did not provide sufficient statistical evidence
+                to conclude that the control and test groups performed differently.
+                Although the control group had a slightly higher sample mean,
+                the p-value of 0.1494 was greater than the 0.05 significance
+                level.
+            </p>
+
+            <p>
+                Therefore, the null hypothesis was not rejected. The observed
+                difference between the two groups could reasonably be explained
+                by sampling variation rather than the experimental change.
+            </p>
+
+
+            <h2>Recommendation</h2>
+
+            <p>
+                The experimental change should not be treated as producing a
+                statistically demonstrated improvement based on these results.
+                The difference between the groups was not statistically
+                significant, so there was not enough evidence from this test
+                alone to support changing the existing approach based on
+                performance.
+            </p>
+
+            <p>
+                Additional testing could provide more evidence before making a
+                larger decision. A future experiment could collect additional
+                observations and continue evaluating whether a consistent
+                difference develops between the groups.
+            </p>
+
+
+            <h2>Skills Applied</h2>
+
+            <p>
+                Excel, A/B testing, hypothesis testing, statistical significance,
+                p-value interpretation, comparison of sample means, and
+                translating experimental results into business recommendations.
+            </p>
+
+        </div>
+
+
+        <div class="project-files">
+
+            <h2>Project Screenshots</h2>
+
+            <p>
+                The screenshots shown in this section will provide an overview
+                of the work completed for this project. If you are interested
+                in reviewing the complete project file or discussing the
+                analysis in greater detail, please contact me and I would be
+                happy to provide access.
+            </p>
+
+            <!-- WARBY PARKER PROJECT SCREENSHOTS WILL BE ADDED HERE LATER -->
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        © 2026 Alden Arce-Romero
+    </footer>
+
+</body>
+
+</html>
