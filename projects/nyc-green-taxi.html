@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NYC Green Taxi Analysis | Alden Arce-Romero</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: #111827;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: #cbd5e1;
+        }
+
+        .project-header {
+            max-width: 850px;
+            margin: auto;
+            padding: 70px 0 40px;
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .project-header p {
+            color: #cbd5e1;
+            font-size: 1.05rem;
+        }
+
+        .project-tools {
+            margin-top: 18px;
+            color: #94a3b8 !important;
+        }
+
+        .project-content {
+            max-width: 850px;
+            margin: auto;
+            padding: 20px 0 80px;
+        }
+
+        .project-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 35px;
+        }
+
+        .project-card h2 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .project-card p {
+            color: #cbd5e1;
+            margin-bottom: 28px;
+        }
+
+        .project-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 20px;
+            margin-bottom: 35px;
+        }
+
+        .analysis-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 22px;
+        }
+
+        .analysis-card h3 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .analysis-card p {
+            color: #cbd5e1;
+            margin: 0;
+        }
+
+        .analysis-label {
+            color: #93c5fd;
+            font-size: 1.05rem;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        .project-files {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 35px;
+        }
+
+        .project-files h2 {
+            margin-bottom: 10px;
+        }
+
+        .project-files p {
+            color: #cbd5e1;
+            margin: 0;
+        }
+
+        footer {
+            background: #111827;
+            text-align: center;
+            padding: 25px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 950px) {
+
+            .project-header,
+            .project-content {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 18px 6%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .project-header {
+                padding: 50px 0 30px;
+            }
+
+            .project-header h1 {
+                font-size: 2rem;
+            }
+
+            .analysis-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <a href="../index.html">
+            <strong>Alden Arce-Romero</strong>
+        </a>
+
+        <a class="back-link" href="../projects.html">
+            ← Back to Other Projects
+        </a>
+
+    </nav>
+
+
+    <section class="project-header">
+
+        <h1>NYC Green Taxi Analysis</h1>
+
+        <p>
+            Analyzed New York City Green Taxi trip and fare data to explore
+            patterns in taxi activity using a large real-world transportation
+            dataset.
+        </p>
+
+        <p class="project-tools">
+            Data Analysis • Data Visualization • Transportation Data
+        </p>
+
+    </section>
+
+
+    <main class="project-content">
+
+        <div class="project-card">
+
+            <h2>Project Overview</h2>
+
+            <p>
+                This project used New York City Green Taxi data to explore
+                transportation activity through trip and fare information.
+                The dataset provided an opportunity to work with real-world
+                transportation records and examine how individual taxi trips
+                could be transformed into useful visual analysis.
+            </p>
+
+
+            <h2>Trip Data Analysis</h2>
+
+            <p>
+                I examined trip information within the Green Taxi dataset to
+                explore patterns in taxi activity. Rather than reviewing
+                individual records by themselves, the data was organized and
+                visualized so that broader transportation patterns could be
+                identified more easily.
+            </p>
+
+
+            <h2>Fare Analysis</h2>
+
+            <p>
+                Fare information was another major component of the analysis.
+                I used data visualization to examine NYC taxi fares and make
+                comparisons across the transportation data.
+            </p>
+
+
+            <h2>Working With Real-World Data</h2>
+
+            <p>
+                The project provided experience analyzing a large transportation
+                dataset containing many individual trip records. Working with
+                this type of data required focusing on the variables that were
+                most useful for answering questions about taxi activity and
+                presenting those results visually.
+            </p>
+
+        </div>
+
+
+        <h2>Key Areas of Analysis</h2>
+
+        <div class="analysis-grid">
+
+            <div class="analysis-card">
+
+                <div class="analysis-label">Trip Data</div>
+
+                <h3>Taxi Activity</h3>
+
+                <p>
+                    Examined individual trip records to explore broader patterns
+                    in New York City Green Taxi activity.
+                </p>
+
+            </div>
+
+
+            <div class="analysis-card">
+
+                <div class="analysis-label">Fare Data</div>
+
+                <h3>Fare Patterns</h3>
+
+                <p>
+                    Analyzed and visualized fare information to compare patterns
+                    across taxi trips.
+                </p>
+
+            </div>
+
+
+            <div class="analysis-card">
+
+                <div class="analysis-label">Real-World Dataset</div>
+
+                <h3>Transportation Data</h3>
+
+                <p>
+                    Worked with real-world New York City transportation records
+                    rather than a small example dataset.
+                </p>
+
+            </div>
+
+
+            <div class="analysis-card">
+
+                <div class="analysis-label">Visualization</div>
+
+                <h3>Pattern Identification</h3>
+
+                <p>
+                    Used visual analysis to make patterns within the trip and
+                    fare data easier to identify and communicate.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <h2>Visualization Approach</h2>
+
+            <p>
+                Data visualization was used to turn individual taxi records
+                into comparisons that were easier to interpret. This allowed
+                trip and fare information to be viewed at a broader level
+                instead of analyzing each taxi record independently.
+            </p>
+
+
+            <h2>Project Takeaway</h2>
+
+            <p>
+                The project demonstrated how a large real-world transportation
+                dataset can be explored through visual analysis. By examining
+                trip and fare information, the raw Green Taxi records could be
+                organized into a form that made patterns in taxi activity
+                easier to understand.
+            </p>
+
+
+            <h2>Skills Applied</h2>
+
+            <p>
+                Data analysis, data visualization, transportation data analysis,
+                fare analysis, pattern identification, and working with
+                large real-world datasets.
+            </p>
+
+        </div>
+
+
+        <div class="project-files">
+
+            <h2>Project Screenshots</h2>
+
+            <p>
+                The screenshots shown in this section will provide an overview
+                of the work completed for this project. If you are interested
+                in reviewing the complete project file or discussing the
+                analysis in greater detail, please contact me and I would be
+                happy to provide access.
+            </p>
+
+            <!-- NYC GREEN TAXI PROJECT SCREENSHOTS WILL BE ADDED HERE LATER -->
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        © 2026 Alden Arce-Romero
+    </footer>
+
+</body>
+
+</html>
